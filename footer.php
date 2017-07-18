@@ -52,7 +52,7 @@
 
 		<div class="site-info">
 
-			<?php // Footer copyright widget area - use standard WordPress text widget with something like this: &copy; 2016 Your Name. All rights reserved ?>
+			<?php // Footer copyright widget area - use standard WordPress text widget with something like this: &copy; 2017 Your Name. All rights reserved ?>
 
 			<?php if ( is_active_sidebar( 'sidebar-7' ) ) : ?>
 
