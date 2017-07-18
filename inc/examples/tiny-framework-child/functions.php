@@ -190,14 +190,14 @@ function tinyframeworkchild_scripts_styles() {
 	wp_register_style( 'tinyframework-style',
 	get_template_directory_uri() . '/style.css',
 	array(), // Use: array( 'tinyframework-google-fonts' ), - if you are using additional Google fonts.
-	'2.3.1',
+	'2.3.2',
 	'all' );
 
 	// Adding CSS file of the Child theme. This style sheet stands last so it would override parent theme and other stylesheets.
 	wp_register_style( 'tinyframeworkchild-style',
 	get_stylesheet_uri(),
 	array(),
-	'2.3.1',
+	'2.3.2',
 	'all' );
 
 	// Enqueing:
@@ -210,7 +210,7 @@ function tinyframeworkchild_scripts_styles() {
 	wp_enqueue_script( 'your-script-name',
 	get_stylesheet_directory_uri() . '/js/your-script-file-name.js',
 	array(),
-	'2.3.1',
+	'2.3.2',
 	true ); // true = loading script in the footer for a better website performance
 	*/
 }

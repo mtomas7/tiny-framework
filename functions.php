@@ -586,13 +586,13 @@ function tinyframework_scripts_styles() {
 	wp_enqueue_style( 'tinyframework-style',
 	get_stylesheet_uri(),
 	array(),
-	'2.3.1' );
+	'2.3.2' );
 
 	// 5.4 - Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'tinyframework-ie',
 	get_template_directory_uri() . '/css/ie.css',
 	array( 'tinyframework-style' ),
-	'2.3.1' );
+	'2.3.2' );
 	wp_style_add_data( 'tinyframework-ie', 'conditional', 'lt IE 9' );
 
 	// 5.4b - Load html5 shiv to add support for HTML5 elements in older IE versions.
@@ -611,14 +611,14 @@ function tinyframework_scripts_styles() {
 	wp_enqueue_script( 'tinyframework-navigation',
 	get_template_directory_uri() . '/js/navigation.js',
 	array(),
-	'2.3.1',
+	'2.3.2',
 	true ); // Loading script in the footer for a better performance
 
 	// 5.7 - Add additional scripts for accessibility, etc.
 	wp_enqueue_script( 'tinyframework-additional-scripts',
 	get_template_directory_uri() . '/js/functions.js',
 	array( 'jquery' ),
-	'2.3.1',
+	'2.3.2',
 	true ); // Loading script in the footer for a better performance
 	// Localize those scripts
 	$translation_array = array(
@@ -632,7 +632,7 @@ function tinyframework_scripts_styles() {
 	wp_enqueue_script( 'tinyframework-skip-link-focus-fix',
 	get_template_directory_uri() . '/js/skip-link-focus-fix.js',
 	array(),
-	'2.3.1',
+	'2.3.2',
 	true ); // Loading script in the footer for a better performance
 }
 add_action( 'wp_enqueue_scripts', 'tinyframework_scripts_styles' );
@@ -785,13 +785,13 @@ add_action( 'tinyframework_credits', 'tinyframework_display_credits' );
 
 // 10.0 - Functions to optimize performance. "The fastest HTTP request is the one not made."
 
-// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child.zip
+// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child/
 
 
 
 // 11.0 - Functions to increase security.
 
-// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child.zip
+// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child/
 
 
 
@@ -801,11 +801,11 @@ add_action( 'tinyframework_credits', 'tinyframework_display_credits' );
  * 12.1 - Tip08 - Remove junk from head.
  */
 
-// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child.zip
+// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child/
 
 // 12.2 - Tip82 - No more jumping for read more link.
 
-// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child.zip
+// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child/
 
 /**
  * 12.3 - Tip28 - Remove curly quotes in WordPress. For more options:
@@ -818,7 +818,7 @@ remove_filter( 'comment_text', 'wptexturize' );
 
 // 12.4 - Tip81 - Completely disable the Post Formats support in the theme and Post Formats UI in the post editor screen.
 
-// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child.zip
+// Functions moved to a Child Example theme that can be found in: inc/examples/tiny-framework-child/
 
 // 12.5 - Add again default attachment image class attributes. See: https://core.trac.wordpress.org/ticket/36996#comment:3
 function tinyframework_add_again_default_attach_image_class_attr( $attr, $attach, $size ) {
