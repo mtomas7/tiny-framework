@@ -3446,6 +3446,9 @@ a.comment-reply-link:hover {
 	font-size: 16px;
 	font-size: 1rem;
 }
+.site-info .widget .textwidget p {
+	display: inline;
+}
 
 /* Tip61 - Discreet link to WordPress Admin panel in the footer */
 #site-admin-link a {
