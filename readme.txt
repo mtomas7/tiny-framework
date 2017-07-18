@@ -2,12 +2,13 @@
 Contributors: TomasM
 Requires at least: WordPress 4.4
 Tested up to: WordPress 4.8.0
-Version: 2.3.1
+Version: 2.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, blog, e-commerce, education
 
 Theme URI: http://mtomas.com/1/
+Theme URI (GitHub): https://github.com/mtomas7/tiny-framework
 Author: Tomas Mackevicius
 Author URI: http://mtomas.com
 Donate link: http://mtomas.com/about-me/
@@ -22,6 +23,8 @@ Tiny Framework features elegant responsive mobile-first design, HTML5 ready stru
 Tiny Framework can be used as a learning tool or your own little web development "framework" a.k.a. "starter theme". With its unique "Coding Tips System" Tiny Framework helps to understand how to extend parent themes and build your own child themes, hacking them the way you want. Along with the main theme you will find an example of a child theme - an easy way to start developing with child themes! You get the best coding examples from default WordPress themes and the best hacks from the child theme.
 
 For more information about Tiny Framework please go to http://mtomas.com/1/
+
+== Donate Link ==
 
 To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services@mtomas.com):
 
@@ -619,6 +622,24 @@ Installation components:
 
 
 == Changelog ==
+
+= 2.3.2 =
+- Released: 2017-08-01
+----------------------
+
+### Release info
+- Release time investment (Development & QA): ~0 h and stopped counting somewhere down the road...
+- Free theme support time investment: ~0 h and stopped counting somewhere down the road...
+- Theme documentation time investment: ~0 h and stopped counting somewhere down the road...
+
+### Added
+- Added security option to functions.php of the child theme: Disable XML-RPC service.
+
+### Fixed
+- Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in additional paragraph, sometimes leaves the text as it is.
+- Replace underscore with hyphen in script handle (via Underscores)
+	https://github.com/Automattic/_s/commit/d1f1f3098352713c80b3c2e5ef5fc9d86ad71d52
+
 
 = 2.3.1 =
 - Released: 2017-07-01
