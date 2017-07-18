@@ -1,0 +1,32 @@
+/* We are people, not machines. Read more at: http://humanstxt.org */
+/* Update this file with your information */
+
+/* SITE BY */
+	Name: YourName LastName, http://YourSite.com
+
+/* TEAM */
+	Role: Web developer, Web designer, SEO, Webmaster
+	Name: YourName LastName
+	URI: http://YourSite.com
+	Contact: email [at] YourSite.com
+	LinkedIn: linkedin.com/in/...
+	Twitter: @YourName
+	Location: WhereYouLive, IL, US
+	From: CityWhereYouFrom, Country
+
+/* SPECIAL THANKS */
+	Name: Joshua Lyman - schema.org integration
+	URI: http://www.joshualyman.com
+	
+/* SITE */
+	Launch date: 2014-03-01
+	Last update: 2014-06-01
+	Language: English
+	Doctype: HTML5
+	CMS: WordPress with plugins: Bad Behavior, Google Analytics for WordPress
+	Theme: Tiny Framework - http://mtomas.com/1/
+	
+/* TECHNOLOGY COLOPHON */
+	Standards: HTML5, CSS3
+	Components: LESS, HTML5 Shiv
+	Software: Notepad++, FileZilla, GIMP, FireFox with add-ons: Web Developer, ColorZilla, MeasureIt, Firebug

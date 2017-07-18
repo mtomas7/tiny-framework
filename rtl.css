@@ -1,0 +1,728 @@
+/*
+Theme Name: Tiny Framework
+Description: Adds support for languages written in a Right To Left (RTL) direction.
+It's easy, just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+@link https://codex.wordpress.org/Right-to-Left_Language_Support
+*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+
+/* 2.0 Typography
+-------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: right;
+}
+/* Also check rtl.css in case you need to adjust blockquote styles for rtl language */
+blockquote {
+	margin: 24px 48px 24px 0;
+	margin: 1.5rem 3rem 1.5rem 0;
+}
+
+/* Tip21 - Icon webfont support implementation and examples */
+blockquote p:first-child:after {
+	margin-right: -48px;
+	margin-right: -3rem;
+	padding-left: 12px;
+	padding-left: 0.75rem;
+}
+.comment-content blockquote {
+	margin: 12px 34px 12px 0;
+	margin: 0.75rem 2.125rem 0.75rem 0;
+}
+.comment-content blockquote p:first-child:after {
+	margin-right: -34px;
+	margin-right: -2.125rem;
+}
+blockquote cite {
+	text-align: left;
+}
+
+
+/* 3.0 Elements
+-------------------------------------------------------------- */
+
+ul,
+ol {
+	margin: 0 1.375rem 1.5rem 0;
+}
+table {
+	border-width: 1px 1px 0 0; /* border-bottom: 1px solid #ededed; */
+}
+caption,
+th,
+td {
+	text-align: right;
+}
+th {
+	border-width: 0 0 1px 1px;
+}
+td {
+	border-width: 0 0 1px 1px;
+}
+
+/* 3.1 FontAwesome webfont */
+
+/* Tip21 - Icon webfont support implementation and examples
+ *
+ * All icon webfont related styles (except for Tip21 and Tip05) are in this section so it would be easy to change them
+ * in case of migration to another icon webfont.
+ */
+
+a.icon-webfont,
+a .icon-webfont,
+a:hover.icon-webfont,
+a:hover .icon-webfont,
+a:active.icon-webfont,
+a:active .icon-webfont,
+.entry-content a[target=_blank]:link:after {
+	text-decoration: none!important;
+}
+.author .page-title:before,
+.category .page-title:before,
+.date .page-title:before,
+.error-404 .page-title:before,
+.search-results .page-title:before,
+.search-no-results .page-title:before,
+.sticky .page-title:before,
+.tag .page-title:before,
+.post-password-required .entry-title:before,
+.status-private .entry-title:before {
+	padding-left: 10px;
+	padding-left: 0.625rem;
+}
+.post-password-required .entry-title:before {
+	padding-left: 5px;
+	padding-left: 0.3125rem;
+}
+.status-private .entry-title:before {
+	padding-left: 5px;
+	padding-left: 0.3125rem;
+}
+/* Remaining css for webfont icons is plugged-in via functions.php */
+
+
+/* 4.0 Forms
+-------------------------------------------------------------- */
+
+/* 4.1 General styles first */
+
+
+/* 5.0 Navigation
+-------------------------------------------------------------- */
+
+/* 5.1 Links */
+
+/* 5.2 Menus */
+
+/* Small (mobile) menu */
+.main-navigation {
+	left: 0px;
+}
+
+/* From Expound css/expound.css */
+.site-header .menu-toggle {
+	float: left;
+}
+.site-header .menu-toggle:before {
+	margin-left: 7px;
+	margin-left: 0.4375rem;
+}
+.main-navigation.toggled ul ul,
+.main-navigation.toggled ul ul ul {
+	right: 0;
+}
+.main-navigation.toggled ul ul a {
+	padding-right: 60px;
+	padding-right: 4.285714286rem;
+}
+.main-navigation.toggled ul ul ul a {
+	padding-right: 80px;
+	padding-right: 5.714285714rem;
+}
+
+/* Tip10 - Add Twenty Thirteen search form to WordPress nav menu */
+.menu-item.menu-item-search {
+	float: left;
+}
+.site-header input[type="search"] {
+	padding-left: 2px; /* Don't cut off the webkit search cancel button */
+	padding-left: 0.125rem;
+}
+.site-header .search-form [type="search"],
+.site-header .search-form [type="text"] {
+	padding: 0 34px 0 0;
+	padding: 0 2.125rem 0 0;
+}
+
+/* Search form for mobile menu */
+.site-header .search-container-mobile .search-form [type="search"],
+.site-header .search-container-mobile .search-form [type="text"] {
+	float: right;
+	margin: 7px 6px 0 0;
+	margin: 0.4375rem 0.375rem 0 0;
+}
+
+/* Tip85 - Add Social Media Menu. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 */
+.social-navigation ul {
+	text-align: left;
+}
+.social-navigation ul li {
+	margin: 0 5px 0 0;
+	margin: 0 0.3125rem 0 0;
+}
+
+/* Tip86 - Style social icons manualy added in the sidebar */
+.widget-area .widget .social-link {
+	margin-left: 5px;
+	margin-left: 0.3125rem;
+}
+
+/* 5.3 Post, archive navigation */
+
+/* .post-navigation, .nav-previous and .nav-next - prev/next post navigation
+ * .pagination and .page-numbers - prev/next posts page (archive) navigation
+ * .nav-links is for post, archive and comment navigations.
+ */
+
+.pagination .prev {
+	right: 0;
+	text-align: right;
+}
+.pagination .next {
+	left: 0;
+	text-align: left;
+}
+.nav-previous {
+	float: right;
+	text-align: right;
+}
+.nav-next {
+	float: left;
+	text-align: left;
+}
+.nav-previous a:before,
+.pagination .prev:before {
+	content: "\f101"; /* fa-angle-double-right */
+	padding-left: 5px;
+	padding-left: 0.3125rem;
+}
+.nav-next a:after,
+.pagination .next:after {
+	content: "\f100"; /* fa-angle-double-left */
+	padding-right: 5px;
+	padding-right: 0.3125rem;
+}
+.entry-content .page-links a,
+.entry-content .page-links > span {
+	margin: 0 0 5px 14px;
+	margin: 0 0 0.3125rem 0.875rem;
+}
+.entry-content .page-links > .page-links-title {
+	padding-left: 0.5rem;
+}
+
+
+/* 6.0 Accessibility
+-------------------------------------------------------------- */
+
+/* Text meant only for screen readers */
+.screen-reader-text:focus {
+	padding: 15px 0 14px 23px;
+	padding: 0.9375rem 0 0.875rem 1.4375rem;
+	right: 5px;
+}
+.skiplink .screen-reader-text:focus {
+	right: 5px;
+}
+
+
+/* 7.0 Alignments
+-------------------------------------------------------------- */
+
+
+/* 8.0 Clearings
+-------------------------------------------------------------- */
+
+
+/* 9.0 Widgets
+-------------------------------------------------------------- */
+
+/* 9.1 General widget styles */
+
+.widget-area .widget ul ul {
+	margin-right: 12px;
+	margin-right: 0.75rem;
+}
+
+/* 9.2 Specific widget styles */
+
+.widget_recent_entries .post-date,
+.widget_rss .rss-date {
+	margin-right: 12px;
+	margin-right: 0.75rem;
+}
+.widget_archive ul,
+.widget_categories ul,
+.widget_meta ul,
+.widget_pages ul,
+.widget_recent_entries ul,
+.widget_recent_comments ul,
+#copyright-widget  {
+	margin-right: 0;
+}
+.widget-area .widget .textwidget li {
+	margin-right: 36px;
+	margin-right: 2.25rem;
+}
+.site-footer .widget-area .widget .textwidget li {
+	margin-right: 0;
+}
+.widget_twitter .timesince {
+	text-align: left;
+}
+
+/* Styles for Categories and Pages widgets */
+.widget-area aside.widget_categories ul ul li {
+	margin-right: 10px;
+	margin-right: 0.625rem;
+}
+#wp-calendar #next {
+	padding-left: 24px;
+	padding-left: 1.5rem;
+	text-align: left;
+}
+#wp-calendar #prev {
+	padding-right: 24px;
+	padding-right: 1.5rem;
+	text-align: right;
+}
+
+/* 9.3 Footer widget styles */
+
+/* Four footer widget areas. Additional styles at 15.0 Media queries */
+#copyright-widget li {
+	margin-right: 0;
+}
+
+
+/* 10.0 Header
+-------------------------------------------------------------- */
+
+
+/* 11.0 Content
+-------------------------------------------------------------- */
+
+/* 11.1 Posts and pages */
+
+.entry-header .title-comment-meta a:before {
+	margin-left: 3px;
+	margin-left: 0.1875rem;
+}
+.posted-on:before,
+.byline:before,
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.edit-link:before,
+.entry-format:before,
+.full-size-link:before {
+	margin-left: 2px;
+	margin-left: 0.125rem;
+}
+.posted-on,
+.byline,
+.cat-links,
+.tags-links,
+.comments-link,
+.edit-link,
+.entry-format,
+.full-size-link {
+	margin-left: 14px;
+	margin-left: 0.875rem;
+}
+.posted-on:before,
+.byline:before,
+.cat-links:before,
+.tags-links:before,
+.comments-link:before,
+.edit-link:before,
+.entry-format:before,
+.full-size-link:before {
+	padding-left: 3px;
+	padding-left: 0.1875rem;
+}
+/* Do not display icons for entry-meta-top */
+.entry-header .entry-meta .byline:before {
+	padding-left: 0;
+}
+.entry-header .entry-meta .byline,
+.entry-header .entry-meta .posted-on,
+.entry-header .entry-meta .comments-link,
+.entry-header .entry-meta .edit-link {
+	margin-left: 0;
+}
+.entry-header .entry-meta .posted-on:before,
+.entry-header .entry-meta .comments-link:before,
+.entry-header .entry-meta .edit-link:before {
+	padding-left: 0;
+}
+
+/* Tip25 - Mark the links that will open in a new window with special icon, usually these are the links to external resources */
+.entry-content .fa-external-link {
+	margin: 0 2px 0 0;
+	margin: 0 0.125rem 0 0;
+	padding: 0 4px 0 2px;
+	padding: 0 0.25rem 0 0.125rem;
+}
+
+.entry-content li,
+.comment-content li,
+.mu_register li {
+	margin: 0 36px 0 0;
+	margin: 0 2.25rem 0 0;
+}
+ul.list-icon-ok li:before {
+	padding-left: 10px;
+	padding-left: 0.625rem;
+}
+ul.list-icon-file li:before {
+	padding-left: 10px;
+	padding-left: 0.625rem;
+}
+ul.list-icon-hand-right li:before {
+	padding: 0 0 5px 10px;
+	padding: 0 0 0.3125rem 0.625rem;
+}
+
+/* Author profiles */
+
+.author-avatar {
+	float: right;
+	margin: 8px 0 0 24px;
+	margin: 0.5rem 0 0 1.5rem;
+}
+.author-link:after {
+	padding-right: 1px;
+	padding-right: 0.0625rem;
+}
+
+/* 11.2 Post Formats */
+
+/* Aside post format */
+
+article.format-aside .aside {
+	border-left: none;
+	border-right: 22px solid #a8bfe8;
+}
+
+/* Link posts */
+
+article.format-link header {
+	float: left;
+}
+article.format-link .entry-content {
+	float: right;
+}
+
+/* Quote posts */
+
+article.format-quote .entry-content blockquote {
+	padding: 24px 0 0 24px;
+	padding: 1.5rem 0 0 1.5rem;
+}
+
+/* Status posts */
+
+.format-status .entry-header img {
+	float: right;
+	margin-left: 21px;
+	margin-left: 1.3125rem;
+}
+
+/* 11.3 Comments */
+
+.comments-area article header img {
+	float: right;
+}
+.comments-area article header cite,
+.comments-area article header time {
+	margin-right: 85px;
+	margin-right: 6.071428571rem;
+}
+.comments-area article header h4 {
+	left: 0;
+}
+.bypostauthor cite .post-author-label {
+	margin: 4px 10px 0 0;
+	margin: 0.25rem 0.625rem 0 0;
+}
+
+/* Comment form */
+
+#respond h3#reply-title #cancel-comment-reply-link {
+	margin-right: 10px;
+	margin-right: 0.625rem;
+}
+
+/* 11.4 Page templates */
+
+/* Front page template */
+
+.template-front-page .site-content .widget-area .widget_text img {
+	float: right;
+	margin: 8px 0 8px 24px;
+	margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+/* Links (blogroll) template */
+
+
+/* 12.0 Footer
+-------------------------------------------------------------- */
+
+.site-info {
+	float: right;
+}
+
+/* Tip61 - Discreet link to WordPress Admin panel in the footer */
+#site-admin-link a {
+	margin-left: 10px;
+	margin-left: 0.625rem;
+}
+.site-info-2 {
+	float: left;
+	text-align: left;
+}
+
+
+/* 13.0 Media
+-------------------------------------------------------------- */
+
+/* 13.1 Images */
+
+/* Responsive images */
+
+.avatar { /* to fix cutt-off border shadow */
+	margin: 0 4px 4px 0;
+	margin: 0 0.25rem 0.25rem 0;
+}
+
+/* Single image attachment view */
+
+/* 13.2 Captions */
+
+/* 13.3 Galleries */
+
+.gallery-item {
+	float: right;
+	margin: 0 0 7px 4px;
+	margin: 0 0 0.4375rem 0.25rem;
+}
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+	margin-left: 0;
+}
+.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
+.gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1),
+.gallery-columns-4.gallery-size-thumbnail figure.gallery-item:nth-of-type(4n+1),
+.gallery-columns-5.gallery-size-thumbnail figure.gallery-item:nth-of-type(5n+1),
+.gallery-columns-6.gallery-size-thumbnail figure.gallery-item:nth-of-type(6n+1),
+.gallery-columns-7.gallery-size-thumbnail figure.gallery-item:nth-of-type(7n+1) {
+	clear: right;
+}
+
+
+/* 14.0 Other styles
+-------------------------------------------------------------- */
+
+/* For fully functioning, dismissible alerts, you must use the alerts JavaScript plugin:
+ * @link http://getbootstrap.com/javascript/#alerts
+ */
+.alert-dismissable,
+.alert-dismissible {
+  padding-left: 35px;
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+  left: -21px;
+}
+
+/* 14.2 Misc. styles */
+
+/* Plugins */
+
+
+/* 15.0 Media queries
+-------------------------------------------------------------- */
+
+/* 15.1 Minimum width of 770 pixels (small screens - mobile phones, small tablets in portrait view mode) */
+@media screen and (min-width: 770px) {
+
+	/* Tip52 - Default site layout for normal view */
+	.content-area {
+		float: right;
+	}
+	.widget-area {
+		float: left;
+	}
+
+	/* Tip14 - Site Logo plugin/feature support. Check: inc/plugin-compatibility.php for more details. */
+	.site-logo-link {
+		float: right;
+		margin: 24px 0 0 24px;
+		margin: 1.5rem 0 0 1.5rem;
+	}
+	#site-title-wrapper {
+		float: right;
+	}
+	.site-header .site-title,
+	.site-header .site-description {
+		text-align: right;
+	}
+
+	/* Top menu for the normal site */
+	.main-navigation ul.nav-menu,
+	.main-navigation div.nav-menu > ul {
+		text-align: right;
+	}
+	.main-navigation ul.nav-menu  {
+		text-align: right;
+	}
+	.main-navigation ul.nav-menu ul.sub-menu {
+		text-align: right;
+	}
+	.main-navigation li {
+		margin: 0 0 0 40px;
+		margin: 0 0 0 2.5rem;
+	}
+	.main-navigation li ul ul {
+		right: 100%;
+	}
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li:focus > ul,
+	.main-navigation .focus > ul {
+		border-right: 0;
+	}
+
+	/* Tip05 - Mark main navigation menu items, containing children with special css class
+	 * Main navigation menu items with drop-down children will be marked by a distinct icon (caret down) via style.css
+	 * @link https://stackoverflow.com/questions/8448978/wordpress-how-do-i-know-if-a-menu-item-has-children
+	 */
+	.nav-menu .menu-item-has-children > a:after,
+	.nav-menu .page_item_has_children > a:after {
+		padding: 0 5px 2px 0;
+		padding: 0 0.3125rem 0.125rem 0;
+	}
+	.sub-menu .menu-item-has-children > a:after,
+	.sub-menu .page_item_has_children > a:after {
+		content: '\f053'; /* fa-chevron-left */
+		left: 8px;
+		text-align: left;
+	}
+
+	/* Search form for mobile menu */
+
+	/* Display archive navigation page numbers in larger views */
+	.template-front-page.has-post-thumbnail article {
+		float: right;
+	}
+	.entry-page-image {
+		float: left;
+	}
+	.template-front-page .site-content .widget-area .widget,
+	.template-front-page.two-sidebars .site-content .widget-area .front-widgets {
+		float: right;
+	}
+	.template-front-page .site-content .widget-area .widget:nth-child(odd) {
+		clear: left;
+	}
+	.template-front-page .site-content .widget-area .widget:nth-child(even),
+	.template-front-page.two-sidebars .site-content .widget-area .front-widgets + .front-widgets {
+		float: left;
+	}
+	.comment-list .children {
+		margin-right: 48px;
+		margin-right: 3rem;
+	}
+	/* Sidebar and Front Page template widgets have no border in normal view */
+
+	/* Three footer widget areas */
+}
+
+/* 15.2 Minimum width of 1100 pixels (average size screens - monitors, small tablets in landscape view mode, larger tablets) */
+@media screen and (min-width: 1100px) {
+	.entry-content .page-links a,
+	.entry-content .page-links > span {
+		margin: 0 0 5px 5px;
+		margin: 0 0 0.3125rem 0.3125rem;
+	}
+	#site-admin-link a {
+		margin-left: 3px;
+		margin-left: 0.1875rem;
+	}
+}
+
+/* 15.3 Minimum width of 1240 pixels (big screens - widescreen monitors, high resolution tablets) */
+@media screen and (min-width: 1240px) {
+	/* Here you can add specific styles for this screen widh */
+}
+
+/* 15.4 Retina-specific styles. This style cannot be processed by LESS */
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+	/* Tip10 - Add Twenty Thirteen search form to WordPress nav menu - http://diythemes.com/thesis/rtfm/add-search-form-wp-wordpress-nav-menus/ */
+	.site-header .search-form [type="search"],
+	.site-header .search-form [type="text"] {
+		background-image: url(images/icon-search-2x.png);
+	}
+}
+
+
+/* 16.0 Print
+----------------------------------------------- */
+
+@media print {
+	.site-header {
+		text-align: right;
+	}
+	.site-header .site-title {
+		text-align: right;
+	}
+	.site-header .site-description {
+		text-align: right;
+	}
+
+	/* 16.1 Comments */
+
+	.comment-list .avatar {
+		right: 2.2em;
+	}
+	.comments-area article header cite,
+	.comments-area article header time {
+		margin-right: 50px;
+		margin-right: 3.57142857rem;
+	}
+}
