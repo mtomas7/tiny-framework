@@ -77,6 +77,6 @@ function tinyframework_customize_partial_blogdescription() {
  * @since Tiny Framework 1.0
  */
 function tinyframework_customize_preview_js() {
-	wp_enqueue_script( 'tinyframework_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2.2.0', true );
+	wp_enqueue_script( 'tinyframework-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '2.2.0', true );
 }
 add_action( 'customize_preview_init', 'tinyframework_customize_preview_js' );
