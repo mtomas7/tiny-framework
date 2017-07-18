@@ -1,0 +1,1036 @@
+/*
+Theme Name: Tiny Framework Child Example
+Theme URI: http://mtomas.com/1/
+Author: Tomas Mackevicius
+Author URI: http://mtomas.com/
+Description: Tiny Framework with its child themes was created with the future in mind and encompasses all the best features of the default WordPress themes in one place, adds full accessibility and Structured Data Markup with Schema.org microdata format support. Fast start is ensured with very extensive documentation! Tiny Framework features elegant responsive mobile-first design, HTML5 ready structure of Underscores, custom per-post headers, custom logo, three footer widgets, FontAwesome icon webfont and Google Fonts support. Web developers will enjoy integrated Theme Hook Alliance custom action hooks. It's all there, you have everything in one neat package. Along with the main theme you will find an example of a child theme - an easy way to start developing with child themes! Tiny Framework can be used as a learning tool or your own little web development "framework". With its unique "Coding Tips System" Tiny Framework helps to understand how to extend parent themes and build your own child themes, hacking them the way you want. You get the best coding examples from default WordPress themes and the best hacks from the child theme. Please read readme.txt for a quick start guide, tips and tricks. For more information please see: http://mtomas.com/1/
+Template: tiny-framework
+Version: 2.3.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, blog, e-commerce, education
+Text Domain: tinyframeworkchild
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     16;
+$line-height: 24;
+
+We use rem for: font-size, margin, padding, width, max-width when using in px.
+
+For easy calculation you may use this tool, set "Choose your <HTML> font-size (px)" to 16:
+@link https://offroadcode.com/prototypes/rem-calculator/
+
+---------- Examples
+
+	padding: 5px 0;
+	padding: 0.3125rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size:
+
+	font-size: 16px
+	font-size: 1rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.5rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+To calculate golden ratio for font size and line height you will need these tools:
+
+http://www.pearsonified.com/typography/
+
+Sizes in rem units for quick reference:
+
+ 1px: 0.0625rem
+ 2px: 0.125rem
+ 3px: 0.1875rem
+ 4px: 0.25rem
+ 5px: 0.3125rem
+ 6px: 0.375rem
+ 7px: 0.4375rem
+ 8px: 0.5rem
+ 9px: 0.5625rem
+10px: 0.625rem
+11px: 0.6875rem
+12px: 0.75rem
+13px: 0.8125rem
+14px: 0.875rem
+15px: 0.9375rem
+16px: 1rem
+17px: 1.0625rem
+18px: 1.125rem
+19px: 1.1875rem
+20px: 1.25rem
+21px: 1.3125rem
+22px: 1.375rem
+23px: 1.4375rem
+24px: 1.5rem
+25px: 1.5625rem
+26px: 1.625rem
+27px: 1.6875rem
+28px: 1.75rem
+29px: 1.8125rem
+30px: 1.875rem
+31px: 1.9375rem
+32px: 2rem
+33px: 2.0625rem
+34px: 2.125rem
+35px: 2.1875rem
+36px: 2.25rem
+37px: 2.3125rem
+38px: 2.375rem
+39px: 2.4375rem
+40px: 2.5rem
+41px: 2.5625rem
+42px: 2.625rem
+43px: 2.6875rem
+44px: 2.75rem
+45px: 2.8125rem
+46px: 2.875rem
+47px: 2.9375rem
+48px: 3rem
+*/
+
+/* Accessibility: Colors
+ * All major background and text colors are recorded here.
+ * Border and shadow colors are defined using rgba values.
+ * Color contrast must meet a minimum of 4.5:1 luminosity ratio, or 3:1 for text rendered larger than 18pt/14pt bold
+ *
+ * For links:
+ * A 4.5:1 contrast between the link text color and the background.
+ * A 3:1 contrast between the link text color and the surrounding non-link text color.
+ * More info at: http://webaim.org/blog/wcag-2-0-and-link-colors/
+ */
+
+/* Site colors
+Green for icon-font: #6ba420
+Green for blockquote: #6ba420
+Orange for widget titles and hover link state: #ff6111
+
+Body text color: #222
+
+Content links:
+
+Link: #0066df
+Visited: #800080
+Hover, active: #dd3811
+
+Headings: #333
+
+Entry title:
+
+In mobile view: #333
+Link, visited: #000
+Hover, active: #ff6111
+
+Meta, comment links:
+
+Link, visited: #555
+Hover, active: #dd3811
+
+Sidebar and footer links:
+
+Link, visited: #555
+Hover, active: #dd3811
+Current and parent categories: #dd3811
+*/
+
+/* Table of Contents:
+ *
+ * 1.0 - Normalize
+ * 2.0 - Typography
+ * 3.0 - Elements
+ *   3.1 - FontAwesome webfont
+ * 4.0 - Forms
+ *   4.1 - General styles first
+ *   4.2 - Buttons
+ *   4.3 - Twitter Bootstrap style button
+ * 5.0 - Navigation
+ *   5.1 - Links
+ *   5.2 - Menus
+ *   5.3 - Post, archive navigation
+ * 6.0 - Accessibility
+ * 7.0 - Alignments
+ * 8.0 - Clearings
+ * 9.0 - Widgets
+ *   9.1 - General widget styles
+ *   9.2 - Specific widget styles
+ *   9.3 - Footer widget styles
+ * 10.0 - Header
+ *    10.1 - Site Header
+ * 11.0 - Content
+ *    11.1 - Posts and pages
+ *    11.2 - Post Formats
+ *    11.3 - Comments
+ *    11.4 - Page templates
+ * 12.0 - Footer
+ * 13.0 - Media
+ *    13.1 - Images
+ *    13.2 - Captions
+ *    13.3 - Galleries
+ * 14.0 - Other styles
+ *    14.1 - Twitter Bootstrap style alerts
+ *    14.2 - Misc. styles
+ * 15.0 - Media queries
+ *    15.0a - Maximum width of 800 pixels
+ *    15.0b - Maximum width of 782 pixels - it only affects the mobile view
+ *    15.0c - Maximum width of 320 pixels - it only affects the mobile view
+ *    15.1 - Minimum width of 783 pixels (small screens - mobile phones, small tablets in portrait view mode)
+ *    15.2 - Minimum width of 1100 pixels (average size screens - monitors, small tablets in landscape view mode, larger tablets)
+ *    15.3 - Minimum width of 1240 pixels (big screens - widescreen monitors, high resolution tablets)
+ *    15.4 - Retina-specific styles. This style cannot be processed by LESS
+ * 16.0 - Print
+ *    16.1 - Comments
+ *
+ * ----------------------------------------------------------------------------
+ */
+
+
+/* 1.0 Normalize
+-------------------------------------------------------------- */
+
+
+/* 2.0 Typography
+-------------------------------------------------------------- */
+
+blockquote,
+blockquote p:first-child:before {
+	color: #6ba420;
+}
+
+/* Tip37 - automatically style author's name in a blockquote. Author's name should be enclosed in <cite>.
+ *
+ * The symbol list for content: @link http://www.w3schools.com/charsets/ref_utf_punctuation.asp
+ */
+blockquote cite:before {
+	content: "\2012\00a0";
+}
+
+
+/* 3.0 Elements
+-------------------------------------------------------------- */
+
+/* 3.1 FontAwesome webfont */
+
+/* Tip21 - Icon webfont support implementation and examples
+ *
+ * All icon webfont related styles (except for Tip21 and Tip05) are in this section so it would be easy to change them
+ * in case of migration to another icon webfont.
+ */
+
+/* These are general styles that should be aplied for all elements that are using webfont icons, you do not need to change anything here.
+ * You can add here all your elements that will use webfont icons.
+ */
+
+/*
+.your-custom-element-1:before,
+.your-custom-element-2:after {
+	display: inline-block;
+	font-family: FontAwesome;
+	font-size: 14px;
+	font-size: 0.875rem;
+	-moz-osx-font-smoothing: grayscale;
+	 -webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-rendering: auto;
+	text-transform: none;
+}
+*/
+
+/* Once element got general webfont icon styles, next you can style it to your needs */
+
+/*
+.your-custom-element-1:before {
+	content: "\f007";
+	font-size: 28px;
+	font-size: 1.75rem;
+	padding-right: 10px;
+	padding-right: 0.625rem;
+	vertical-align: middle;
+}
+.your-custom-element-2:after {
+	content: "\f007";
+	font-size: 28px;
+	font-size: 1.75rem;
+	padding-right: 10px;
+	padding-right: 0.625rem;
+	vertical-align: middle;
+}
+*/
+
+/* Tip23 - Mark links to documents with corresponding icons for PDF, Word, Excel, PowerPoint and archive documents.
+ *
+ * You can always invoke document icons with classes: icon-pdf, icon-word, icon-excel, icon-powerpoint, icon-archive-file
+ *
+ * To activate automatic icon placement on links to the documents, uncomment next block of CSS rules.
+ *
+ * 7z extension was non added because it produces error, most likelly because of lack of MIME type support on some servers:
+ * https://stackoverflow.com/questions/18562580/possible-to-add-mime-type-to-web-config-without-possibly-breaking-the-site
+ */
+
+/*
+.content-area a[href$=gz]:before,
+.content-area a[href$=doc]:before,
+.content-area a[href$=docx]:before,
+.content-area a[href$=pdf]:before,
+.content-area a[href$=ppt]:before,
+.content-area a[href$=pptx]:before,
+.content-area a[href$=rar]:before,
+.content-area a[href$=xls]:before,
+.content-area a[href$=xlsx]:before,
+.content-area a[href$=zip]:before {
+	font-size: 18px;
+	font-size: 1.125rem;
+	padding-right: 5px;
+	padding-right: 0.3125rem;
+	vertical-align: baseline;
+}
+.content-area a[href$=doc]:before,
+.content-area a[href$=docx]:before {
+	color: #2a5699;
+	content: "\f1c2";
+}
+.content-area a[href$=pdf]:before {
+	color: #bb0706;
+	content: "\f1c1";
+}
+.content-area a[href$=ppt]:before,
+.content-area a[href$=pptx]:before {
+	color: #d24625;
+	content: "\f1c4";
+}
+.content-area a[href$=xls]:before,
+.content-area a[href$=xlsx]:before {
+	color: #207245;
+	content: "\f1c3";
+}
+.content-area a[href$=gz]:before,
+.content-area a[href$=rar]:before,
+.content-area a[href$=zip]:before {
+	color: #428f27;
+	content: "\f1c6";
+}
+*/
+
+/* Do not add file type icon to buttons */
+
+/*
+.content-area a.btn[href$=gz]:before,
+.content-area a.btn[href$=doc]:before,
+.content-area a.btn[href$=docx]:before,
+.content-area a.btn[href$=pdf]:before,
+.content-area a.btn[href$=ppt]:before,
+.content-area a.btn[href$=pptx]:before,
+.content-area a.btn[href$=rar]:before,
+.content-area a.btn[href$=xls]:before,
+.content-area a.btn[href$=xlsx]:before,
+.content-area a.btn[href$=zip]:before {
+	content: none;
+}
+*/
+
+
+/* 4.0 Forms
+-------------------------------------------------------------- */
+
+/* 4.1 General styles first */
+
+/* 4.2 Buttons */
+
+/* Make button text bold */
+.btn-custom-black,
+.btn-custom-blue,
+.btn-custom-green,
+.btn-custom-orange,
+.btn-custom-red {
+	font-weight: bold;
+}
+
+/* 4.3 Twitter Bootstrap style buttons */
+
+
+/* 5.0 Navigation
+-------------------------------------------------------------- */
+
+/* 5.1 Links */
+
+/* 5.2 Menus */
+
+/* Small (mobile) menu */
+
+/* Tip10 - Add Twenty Thirteen search form to WordPress nav menu.
+ * All code is already in parent theme, use this in case you need to change something.
+ */
+
+/*
+.menu-item.menu-item-search {
+	float: right;
+	margin: 4px 0 0 0;
+	margin: 0.25rem 0 0 0;
+}
+.site-header input[type="search"] {
+	padding-right: 2px;
+	padding-right: 0.125rem;
+	width: 270px;
+	width: 19.285714286rem;
+}
+.site-header input[type="search"]:-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+.site-header .search-form [type="search"],
+.site-header .search-form [type="text"] {
+	background-color: transparent;
+	background-image: url(images/icon-search.png);
+	background-position: 5px center;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	border: none;
+	cursor: pointer;
+	height: 30px;
+	margin: 3px 0;
+	margin: 0.1875rem 0;
+	padding: 0 0 0 34px;
+	padding: 0 0 0 2.125rem;
+	position: relative;
+	-webkit-transition: width 400ms ease, background 400ms ease;
+	transition:         width 400ms ease, background 400ms ease;
+	width: 0;
+}
+.site-header .search-form [type="search"]:focus,
+.site-header .search-form [type="text"]:focus {
+	background-color: #f5f5f5;
+	border: 1px solid #bbb;
+	box-shadow: none;
+	cursor: text;
+	outline: 0;
+	width: 230px;
+	width: 16.428571429rem;
+}
+.site-header .search-form [type="submit"] {
+	display: none;
+}
+*/
+
+/* Hide top menu search in child themes for the mobile menu */
+.menu-item.menu-item-search {
+	display: none;
+}
+
+/* Tip85b - Add Social Media Menu to header. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 */
+header .social-navigation {
+	display: none;
+}
+
+/* Tip86 - Style social icons manualy added in the sidebar. Check also media queries for additional styles. */
+.widget-area .widget .social-link {
+	font-size: 30px;
+	font-size: 1.875rem;
+	/* Increasing spacing for tap targets */
+	line-height: 1.2;
+	margin: 0 24px 24px 0;
+	margin: 0 1.5rem 1.5rem 0;
+	vertical-align: middle;
+}
+.widget-area .widget a.social-link,
+.widget-area .widget a .social-link,
+.widget-area .widget a:visited.social-link,
+.widget-area .widget a:visited .social-link {
+	color: #777;
+}
+.widget-area .widget a:active.social-link,
+.widget-area .widget a:active .social-link,
+.widget-area .widget a:hover.social-link,
+.widget-area .widget a:hover .social-link {
+	color: #ff6111;
+}
+
+/* 5.3 Post, archive navigation */
+
+/* Tip27 - Uncomment next code line to disable "previous article - next article" navigation below the content of a post */
+
+/*
+.post-navigation {
+	display: none;
+}
+*/
+
+/* Tip88 - Customize color scheme: Navigation links for archive and single views (Previous, Next page of articles and article) */
+
+/*
+.nav-links a,
+.nav-links a:visited {
+	color: #b076ff;
+	-webkit-tap-highlight-color: rgba(176, 118, 255, 1);
+}
+.nav-links a:focus {
+	background-color: #b076ff;
+	color: #fff;
+}
+*/
+
+
+/* 6.0 Accessibility
+-------------------------------------------------------------- */
+
+/* Text meant only for screen readers */
+
+
+/* 7.0 Alignments
+-------------------------------------------------------------- */
+
+
+/* 8.0 Clearings
+-------------------------------------------------------------- */
+
+
+/* 9.0 Widgets
+-------------------------------------------------------------- */
+
+/* 9.1 General widget styles */
+
+/* Tip88 - Customize color scheme: Widget title. */
+
+/*
+.widget-title {
+	color: #;
+	font-size: 18px;
+	font-size: 1.125rem;
+	font-weight: bold;
+	line-height: 1.6;
+	text-transform: uppercase;
+}
+*/
+
+/* 9.2 Specific widget styles */
+
+/* Tip53 - Change vertical spacing between lines in Recent Posts widget. If your post titles are rather short, 12px will be a good choice */
+
+/*
+.widget_recent_entries li {
+	margin-bottom: 12px;
+	margin-bottom: 0.75rem;
+}
+*/
+
+/* Styles for Categories and Pages widgets */
+
+/* 9.3 Footer widget styles */
+
+/* Four footer widget areas. Additional styles at 15.0 Media queries */
+
+
+/* 10.0 Header
+-------------------------------------------------------------- */
+
+/* 10.1 Site Header */
+
+/* Tip88 - Customize color scheme: Site Title and Description - can also be changed via Admin > Appearance > Customizer */
+
+/*
+.site-header .site-description a,
+.site-header .site-title a {
+	color: #515151;
+}
+.site-header .site-description a:hover,
+.site-header .site-title a:hover {
+	color: #ff6111;
+}
+.site-header .site-description {
+	color: #757575;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	font-weight: normal;
+}
+.site-header .site-title {
+	color: #515151;
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: bold;
+	line-height: 1.285714286;
+}
+*/
+
+/* Tip14 - Custom logo feature support. Check: inc/template-tags.php for more details. */
+
+/* Enable custom logo in mobile view */
+
+/*
+.site-branding {
+	margin-top: 12px;
+	margin-top: 0.75rem;
+}
+.site-logo-link,
+.custom-logo-link {
+	display: block;
+	float: left;
+	margin: 5px 24px 0 0;
+	margin: 0.3125rem 1.5rem 0 0;
+}
+#site-title-wrapper {
+	padding: 12px 0 12px 12px;
+	padding: 0.75rem 0 0.75rem 0.75rem;
+}
+.site-header .site-title,
+.site-header .site-title a {
+	clear: none;
+	display: inline;
+}
+.site-header .site-description,
+.site-header .site-title {
+	text-align: left;
+}
+*/
+
+/* Tip06 - Custom headers for posts and pages. Uncomment following CSS rules to disable border and shadow on main header: */
+
+/*
+img.header-image,
+.site-header img.wp-post-image {
+	border-radius: 0;
+	box-shadow: none;
+}
+*/
+
+/* Tip12 - Uncomment following CSS rules to have classic Twenty Twelve front page look - disable header image for the Front Page Templ.: */
+
+/*
+.template-front-page img.header-image,
+.template-front-page .site-header img.wp-post-image {
+	display: none;
+}
+*/
+
+
+/* 11.0 Content
+-------------------------------------------------------------- */
+
+/* 11.1 Posts and pages */
+
+/* Tip88 - Customize color scheme: Entry Title */
+.entry-header .entry-title,
+.entry-header .entry-title a {
+	color: #333;
+	/* Tip32 - Add shadow to post/page title. Usage: text-shadow: horizontal-offset vertical-offset blur color; last digit of rgba sets opacity */
+	/* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
+}
+
+/* Tip25b - Disable special icons, that marks the links that will open in a new window */
+
+/*
+.entry-content .fa-external-link {
+	display: none;
+}
+*/
+
+/* Tip26b - Uncomment next CSS rule to Print HTML bellow post title with meta information (date/time and author)
+ * for the index/archive views in MOBILE view.
+ */
+
+/*
+.archive .entry-header .entry-meta,
+.home .entry-header .entry-meta {
+	display: block;
+}
+*/
+
+/* Tip26c - Hide HTML bellow post title with meta information (date/time and author) for the posts in MOBILE and/or NORMAL view. */
+
+/*
+.singular .entry-header .entry-meta {
+	display: none;
+}
+*/
+
+/* Tip30 - Uncomment next CSS block to hide entry meta section, located below the post (with author, categories, tags)
+ * in the Index page and archive listings.
+ */
+
+/*
+.list-view footer.entry-meta {
+	display: none;
+}
+.format-link footer.entry-meta,
+.format-status footer.entry-meta {
+	display: block;
+}
+.content-area article {
+	padding-bottom: 12px!important;
+	padding-bottom: 0.75rem!important;
+}
+*/
+
+/* Alternative heading style to try */
+
+/*
+.entry-content h1,
+.entry-content h2,
+.entry-summary h1,
+.entry-summary h2,
+.page-content h1,
+.page-content h2 {
+	border-bottom: 3px double #bbb;
+	margin: 48px 0 24px 0;
+	margin: 3rem 0 1.5rem 0;
+}
+*/
+
+/* Tip33 - Enable hyphenation of text for article. Please note that automatic hyphenation can reduce
+ * accesibility of the theme - it can cause strange pronunciation with screen readers.
+ */
+
+/*
+.content-area article {
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+		-ms-hyphens: auto;
+			hyphens: auto;
+}
+*/
+
+/* Tip41 - Display the optional excerpt (subtitle) below the entry title. To enable subtitles, uncomment next rule here or paste it in custom CSS plugin. */
+
+/*
+body .entry-summary-top {
+	display: block;
+}
+*/
+
+/* Tip88 - Customize color scheme: Styles for page titles for categories, tags, etc. */
+
+/*
+.page-title {
+	color: #6ba420;
+	font-size: 27px;
+	font-size: 1.6875rem;
+	font-weight: normal;
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+*/
+
+/* Entry-meta for specific post formats */
+
+/* Author profiles */
+
+/* 11.2 Post Formats */
+
+/* 11.3 Comments */
+
+/* Comment form */
+
+/* 11.4 Page templates */
+
+/* Front page template */
+.template-front-page .page .entry-content {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+/* Links (blogroll) template */
+
+
+/* 12.0 Footer
+-------------------------------------------------------------- */
+
+/* Tip63 - Uncomment following CSS rules to have classic Twenty Twelve front page look - disable footer widgets for the Front Page Templ.: */
+
+/*
+.template-front-page #footer-widgets {
+	display: none;
+}
+*/
+
+
+/* 13.0 Media
+-------------------------------------------------------------- */
+
+/* Increase size for emoji and smiley icons, so they would look better. */
+
+.comment-content .wp-smiley,
+.entry-content .wp-smiley,
+.page-content .wp-smiley {
+	height: 1.2em!important;
+	max-height: 1.2em!important;
+	max-width: 1.2em!important;
+	width: 1.2em!important;
+}
+
+/* 13.1 Images */
+
+/* Responsive images */
+
+/* Tip40 - Optional post thumbnail (Featured Image) on index views. Uncomment following CSS rules to show the Featured image on index views. */
+.post-thumbnail {
+	display: block;
+}
+
+/* Single image attachment view */
+
+/* 13.2 Captions */
+
+/* 13.3 Galleries */
+
+
+/* 14.0 Other styles
+-------------------------------------------------------------- */
+
+/* 14.1 Twitter Bootstrap style alerts. Usage: http://getbootstrap.com/components/#alerts */
+
+/* 14.2 Misc. styles */
+
+/* Plugins */
+
+/* Language specific styles */
+html:lang(lt-LT) .entry-date {
+	text-transform: capitalize;
+}
+
+
+/* 15.0 Media queries
+-------------------------------------------------------------- */
+
+/* Please note, that all CSS rules, placed outside of media queries, affect all screen sizes - starting from small screens
+ * (mobile phones) and going up to the very wide screens (widescreen monitors, high resolution tablets). Those rules can be
+ * adjusted and overridden, targeting specific screen sizes in media queries bellow.
+ *
+ * Important: lower size media queries will also affect wider screen sizes, e.g. min-width: 770px media query will also affect
+ * screen sizes starting with 960px and 1250px.
+ *
+ * Wondering what are the screen sizes of most popular devices? Check: http://screensiz.es
+ */
+
+/* 15.0a - Maximum width of 800 pixels
+ */
+@media screen and (max-width:800px) {
+	/* Here you can add specific styles for this screen widh */
+} /* END of @media screen and (max-width: 800px) */
+
+/* 15.0b Maximum width of 782 pixels - it only affects the mobile view.
+ */
+@media screen and (max-width: 782px) {
+	/* From Expound css/expound.css */
+	.site-header .menu-toggle {
+		background: #3a3a3a;
+		color: #fff;
+		font: 16px/16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: normal;
+		padding: 10px 20px;
+		padding: 0.625rem 1.25rem;
+	}
+	.site-header .menu-toggle:focus,
+	.site-header .menu-toggle:hover {
+		background: #474747;
+	}
+	.site-header .menu-toggle:before {
+		content: "\2261";
+		font-size: 20px;
+		font-size: 1.25rem;
+		margin-right: 7px;
+		margin-right: 0.4375rem;
+	}
+	.main-navigation.toggled .menu-toggle {
+		background: #474747;
+	}
+	.main-navigation.toggled a {
+		color: #fff;
+		padding: 10px 40px;
+		padding: 0.625rem 2.5rem;
+		text-decoration: none;
+	}
+	.main-navigation.toggled li a {
+		background: #3a3a3a;
+	}
+	.main-navigation.toggled li a:hover {
+		background: #474747;
+	}
+	.main-navigation.toggled ul > .current_page_item > a,
+	.main-navigation.toggled ul > .current-menu-item > a {
+		background: #117bb8;
+	}
+} /* END of @media screen and (max-width: 782px) */
+
+/* 15.0c - Maximum width of 320 pixels - it only affects the mobile view
+ */
+@media screen and (max-width:320px) {
+	/* Here you can add specific styles for this screen widh */
+} /* END of @media screen and (max-width: 320px) */
+
+/* 15.1 Minimum width of 783 pixels - it is activated at the same time as mobile view of WordPress admin-bar
+ * (small screens - mobile phones, small tablets in portrait view mode)
+ */
+@media screen and (min-width: 783px) {
+	/* Tip52 - Adjust default site layout for normal view */
+
+	/*
+	.content-area {
+		float: left;
+		width: 65.104166667%;
+	}
+	.site-content .widget-area {
+		float: right;
+		width: 30.5%;
+	}
+	*/
+
+	/* Tip52b  - Change site layout (position of sidebar) for normal view */
+
+	/*
+	.content-area {
+		float: right;
+		width: 65.104166667%;
+	}
+	.site-content .widget-area {
+		float: left;
+		width: 30.5%;
+	}
+	*/
+
+	/* Tip14 - Custom logo feature support. Check: inc/template-tags.php for more details. */
+	.site-logo-link, /* deprecated */
+	.custom-logo-link {
+		margin: 24px 24px 0 0;
+		margin: 1.5rem 1.5rem 0 0;
+	}
+	.custom-logo {
+
+	}
+	#site-title-wrapper {
+		margin-bottom: 0;
+		padding-top: 0;
+	}
+
+	/* Tip88 - Customize color scheme: Site Title and Description - can also be changed via Admin > Appearance > Customizer */
+
+	/*
+	.site-header .site-description a,
+	.site-header .site-title,
+	.site-header .site-title a {
+		color: #333;
+	}
+	.site-header .site-description a:hover,
+	.site-header .site-title a:hover {
+		color: #ff6111;
+	}
+	*/
+
+	/* Show top menu search in child themes for the full menu */
+	.menu-item.menu-item-search {
+		display: inline;
+	}
+	.entry-header .entry-title {
+		font-size: 36px;
+		font-size: 2.25rem;
+		font-weight: normal;
+		line-height: 1.30;
+	}
+
+	/* Tip85b - Add Social Media Menu to header. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 */
+	header .social-navigation {
+		display: inline-block;
+		float: right;
+		margin-top: 12px;
+	}
+
+	/* Tip88 - Customize color scheme: Entry Title */
+	.entry-header .entry-title,
+	.entry-header .entry-title a {
+		color: #333;
+		/* Tip32 - Add shadow to post/page title. Usage: text-shadow: horizontal-offset vertical-offset blur color; last digit of rgba sets opacity */
+		/* text-shadow: 1px 1px 3px rgba(0,0,0,0.2); */
+	}
+	.archive .entry-header .entry-meta,
+	.home .entry-header .entry-meta {
+		display: none;
+	}
+
+	/* Tip26b - uncomment next CSS rule to Print HTML bellow post title with meta information (date/time and author)
+	 * for the index/archive views in NORMAL view.
+	 */
+
+	/*
+	.archive .entry-header .entry-meta,
+	.home .entry-header .entry-meta {
+		display: block;
+	}
+	*/
+
+	/* Tip62 - Add side borders for the middle footer widget - to better separate widgets visually. Uncomment next section: */
+
+	/*
+	#footer-widgets.three #footer-widget-middle {
+		border: 1px solid #ededed;
+		border-width: 0 1px;
+	}
+	*/
+
+	/* Tip88 - Customize color scheme: Widget title. */
+
+	/*
+	.widget-title {
+		color: #;
+		font-size: 18px;
+		font-size: 1.125rem;
+		font-weight: bold;
+		line-height: 1.6;
+		text-transform: uppercase;
+	}
+	*/
+
+	/* Tip86 - Style social icons manualy added in the sidebar */
+	.widget-area .widget .social-link {
+		margin: 0 10px 10px 0;
+		margin: 0 0.625rem 0.625rem 0;
+	}
+} /* END of @media screen and (min-width: 783px) */
+
+/* 15.2 Minimum width of 1100 pixels (average size screens - monitors, small tablets in landscape view mode, larger tablets) */
+@media screen and (min-width: 1100px) {
+	/* Here you can add specific styles for this screen widh */
+} /* END of @media screen and (min-width: 1100px) */
+
+/* 15.3 Minimum width of 1240 pixels (big screens - widescreen monitors, high resolution tablets) */
+@media screen and (min-width: 1240px) {
+	/* Here you can add specific styles for this screen widh */
+} /* END of @media screen and (min-width: 1240px) */
+
+/* 15.4 Retina-specific styles. This style cannot be processed by LESS */
+@media print,
+	(-o-min-device-pixel-ratio: 5/4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+	/* Here you can add specific styles for Retina displays */
+}
+
+
+/* 16.0 Print
+----------------------------------------------- */
+
+@media print {
+	/* Here you can add specific styles for the printing */
+
+	/* 16.1 Comments */
+}

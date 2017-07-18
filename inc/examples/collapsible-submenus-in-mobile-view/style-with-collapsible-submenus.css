@@ -1,0 +1,69 @@
+/* Implementation of navigation with collapsible submenus.
+ * These CSS rules can be merged to child thmeme's style.css, adding to according media queries.
+ */
+
+/* 15.1 Minimum width of 783 pixels - it is activated at the same time as mobile view of WordPress admin-bar 782px
+ * (small screens - mobile phones, small tablets in portrait view mode)
+ */
+@media screen and (min-width: 783px) {
+	.main-navigation.toggled .nav-menu {
+		display: block;
+	}
+	.dropdown-toggle {
+		display: none;
+	}
+}
+
+/* 15.1b Maximum width of 782 pixels - it only affects the mobile view.
+ */
+@media screen and (max-width: 782px) {
+	.nav-menu .menu-item-has-children > a:after,
+	.nav-menu .page_item_has_children > a:after {
+		content: "";
+	}
+	.main-navigation.toggled a:after {
+		border-style: none !important;
+	}
+	#primary-menu ul.sub-menu {
+		display: none;
+	}
+	#primary-menu ul.toggled-on {
+		display: block;
+	}
+	li.menu-item,
+	li.page_item {
+		position: relative;
+	}
+	.dropdown-toggle {
+		background-color: #fff;
+		border: 0;
+		height: 48px;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		text-transform: none;
+		top: 0;
+		width: 48px;
+	}
+	.dropdown-toggle:focus,
+	.dropdown-toggle:hover {
+		background-color: #474747;
+	}
+	.dropdown-toggle:after {
+		font-family: "FontAwesome";
+		color: #222;
+		content: "\f078";
+		font-size: 16px;
+		left: 1px;
+		position: relative;
+		width: 48px;
+	}
+	.dropdown-toggle:focus:after,
+	.dropdown-toggle:hover:after {
+		background-color: #474747;
+		color: #fff;
+	}
+	.dropdown-toggle.toggled-on::after {
+		content: "\f077";
+	}
+}

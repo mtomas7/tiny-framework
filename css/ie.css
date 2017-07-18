@@ -1,0 +1,292 @@
+/**
+ * Styles for older IE versions (previous to IE9).
+ */
+
+body {
+	background-color: #e6e6e6;
+}
+body.custom-background-empty {
+	background-color: #fff;
+}
+body.custom-background-empty .site,
+body.custom-background-white .site {
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.site {
+	box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	margin: 48px auto;
+	max-width: 960px;
+	overflow: hidden;
+	padding: 0 40px;
+}
+.site-header .site-title,
+.site-header .site-description {
+	text-align: left;
+}
+.site-header .site-title {
+	font-size: 26px;
+	line-height: 1.846153846;
+}
+.site-header .search-container-mobile {
+	display: none;
+}
+.main-navigation {
+	position: static;
+	background-color: #fff;
+	margin: 24px 0 0 0;
+}
+.main-navigation ul.nav-menu,
+.main-navigation div.nav-menu > ul {
+	border-bottom: 1px solid #ededed;
+	border-top: 1px solid #ededed;
+	display: inline-block !important;
+	text-align: left;
+	width: 100%;
+}
+.main-navigation ul {
+	margin: 0;
+	text-indent: 0;
+}
+.main-navigation li a,
+.main-navigation li {
+	display: inline-block;
+	text-decoration: none;
+}
+.main-navigation li a {
+	border-bottom: 0;
+	color: #6a6a6a;
+	line-height: 3.692307692;
+	text-transform: uppercase;
+}
+.main-navigation li a:hover {
+	color: #000;
+}
+.main-navigation li {
+	margin: 0 40px 0 0;
+	position: relative;
+}
+.main-navigation li ul {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	z-index: 1;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+.main-navigation li ul ul {
+	top: 0;
+	left: 100%;
+}
+.main-navigation ul li:hover > ul,
+.main-navigation ul li:focus > ul,
+.main-navigation .focus > ul {
+	border-left: 0;
+	clip: inherit;
+	overflow: inherit;
+	height: inherit;
+	width: inherit;
+}
+.main-navigation li ul li a {
+	background: #efefef;
+	border-bottom: 1px solid #ededed;
+	display: block;
+	font-size: 11px;
+	line-height: 2.181818182;
+	padding: 8px 10px;
+	width: 180px;
+}
+.main-navigation li ul li a:hover {
+	background: #e3e3e3;
+	color: #444;
+}
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main-navigation .current_page_ancestor > a {
+	color: #636363;
+	font-weight: bold;
+}
+/* Tip05 - Mark main navigation menu items, containing children with special css class */
+/* Main navigation menu items with drop-down children will be marked by a distinct icon (caret down) via style.css */
+/* http://stackoverflow.com/questions/8448978/wordpress-how-do-i-know-if-a-menu-item-has-children */
+.nav-menu .menu-item-has-children > a:after,
+.nav-menu .page_item_has_children > a:after {
+	content: '\f078'; /* fa-chevron-down */
+	padding: 0 0 2px 5px;
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal 10px/1 'FontAwesome';
+	vertical-align: middle;
+}
+.sub-menu .menu-item-has-children > a:after,
+.sub-menu .page_item_has_children > a:after {
+	content: '\f054'; /* fa-chevron-right */
+	position: absolute;
+	right: 8px;
+	top: 16px;
+	display: inline-block;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: normal 10px/1 'FontAwesome';
+}
+.main-navigation .menu-toggle {
+	display: none;
+}
+.content-area {
+	float: left;
+	width: 65.104166667%;
+}
+.full-width .content-area {
+	float: none;
+	width: 100%;
+}
+body.template-front-page .content-area,
+body.attachment .content-area,
+body.full-width .content-area {
+	width: 100%;
+}
+.entry-header .entry-title {
+	font-size: 22px;
+}
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image,
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	width: auto; /* Prevent stretching of full-size and large-size images with height and width attributes in IE8 */
+}
+.entry-content .page-links a,
+.entry-content .page-links > span {
+	padding: 0 7px;
+}
+.author-avatar {
+	float: left;
+	margin-top: 8px;
+}
+.author-description {
+	float: right;
+	width: 80%;
+}
+.pagination {
+	margin-bottom: 72px;
+}
+#respond form input[type="text"] {
+	width: 46.333333333%;
+}
+#respond form textarea.blog-textarea {
+	width: 79.666666667%;
+}
+.template-front-page .content-area,
+.template-front-page article {
+	overflow: hidden;
+}
+.template-front-page.has-post-thumbnail article {
+	float: left;
+	width: 47.916666667%;
+}
+.entry-page-image {
+	float: right;
+	margin-bottom: 0;
+	width: 47.916666667%;
+}
+.widget-area {
+	float: right;
+	width: 30.5%;
+}
+/* Three footer widget areas */
+#footer-widgets {
+	width: 100%;
+	border-top: none;
+}
+#footer-widgets.three #footer-widget-left {
+	float: left;
+	width: 33%;
+	padding-right: 2.3%;
+}
+#footer-widgets.three #footer-widget-middle {
+	float: left;
+	width: 33%;
+	padding-left: 2.5%;
+	padding-right: 2.3%;
+}
+#footer-widgets.three #footer-widget-right {
+	float: right;
+	width: 33%;
+	padding-left: 2.5%;
+}
+/* IE Front Page Template Widget fix */
+.template-front-page .widget-area {
+	clear: both;
+}
+.template-front-page .widget {
+	width: 100% !important;
+	border: none;
+}
+.template-front-page .widget-area .widget,
+.template-front-page .first.front-widgets,
+.template-front-page.two-sidebars .widget-area .front-widgets {
+	float: left;
+	margin-bottom: 24px;
+	width: 51.875%;
+}
+.template-front-page .second.front-widgets,
+.template-front-page .widget-area .widget:nth-child(odd) {
+	clear: right;
+}
+.template-front-page .first.front-widgets,
+.template-front-page .second.front-widgets,
+.template-front-page.two-sidebars .widget-area .front-widgets + .front-widgets {
+	float: right;
+	margin: 0 0 24px;
+	width: 39.0625%;
+}
+.template-front-page.two-sidebars .widget,
+.template-front-page.two-sidebars .widget:nth-child(even) {
+	float: none;
+	width: auto;
+}
+/* add input font for <IE9 Password Box to make the bullets show up */
+input[type="password"] {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+/* RTL overrides for IE8
+-------------------------------------------------------------- */
+.rtl .site-header .site-title,
+.rtl .site-header .site-description {
+	text-align: right;
+}
+.rtl .widget-area,
+.rtl .author-description {
+	float: left;
+}
+.rtl .author-avatar,
+.rtl .content-area {
+	float: right;
+}
+.rtl .main-navigation ul.nav-menu,
+.rtl .main-navigation div.nav-menu > ul {
+	text-align: right;
+}
+.rtl .main-navigation ul li ul li,
+.rtl .main-navigation ul li ul li ul li {
+	margin-left: 40px;
+	margin-right: auto;
+}
+.rtl .main-navigation li ul ul {
+	position: absolute;
+	bottom: 0;
+	right: 100%;
+	z-index: 1;
+}

@@ -1,0 +1,172 @@
+/*
+Theme Name: Tiny Framework
+Description: Used to style the TinyMCE editor for RTL languages.
+See also rtl.css file.
+*/
+
+html .mceContentBody {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+
+/* 2.0 Typography
+-------------------------------------------------------------- */
+
+/* Also check rtl.css in case you need to adjust blockquote styles for rtl language */
+blockquote {
+	margin: 12px 48px 24px 0;
+	margin: 0.75rem 3rem 1.5rem 0;
+}
+/* Tip21 - Icon webfont support implementation and examples */
+blockquote p:first-child:before {
+	margin-right: -48px;
+	margin-right: -3rem;
+	padding-left: 12px;
+	padding-left: 0.75rem;
+}
+blockquote cite {
+	text-align: left;
+}
+
+
+/* 3.0 Elements
+-------------------------------------------------------------- */
+
+ul,
+ol {
+	margin: 0 1.375rem 1.5rem 0;
+}
+table,
+.mce-item-table {
+	border-width: 1px 1px 0 0; /* border-bottom: 1px solid #ededed; */
+}
+caption,
+th,
+.mce-item-table th,
+td {
+	text-align: right;
+}
+th {
+	border-width: 0 0 1px 1px;
+}
+td,
+.mce-item-table td {
+	border-width: 0 0 1px 1px;
+}
+
+/* 3.1 FontAwesome webfont */
+
+/* Tip21 - Icon webfont support implementation and examples
+ *
+ * All icon webfont related styles (except for Tip21 and Tip05) are in this section so it would be easy to change them
+ * in case of migration to another icon webfont.
+ */
+
+a.icon-webfont,
+a .icon-webfont,
+a:hover.icon-webfont,
+a:hover .icon-webfont,
+a:active.icon-webfont,
+a:active .icon-webfont,
+.mce-content-body a[target=_blank]:link:after {
+	text-decoration: none!important;
+}
+
+
+/* 7.0 Alignments
+-------------------------------------------------------------- */
+
+
+/* 11.0 Content
+-------------------------------------------------------------- */
+
+/* 11.1 Posts and pages */
+
+
+/* Tip25 - Mark the links that will open in a new window with special icon, usually these are the links to external resources
+ * To disable it, just delete this CSS block. To disable it in child themes, please search for Tip25b in child theme's style.css
+ */
+/* We keep the old CSS styles here, because accessibility script only works on frontend. */
+.mce-content-body a[target=_blank]:link:after {
+	padding: 0 4px 0 2px;
+	padding: 0 0.25rem 0 0.125rem;
+}
+li {
+	margin: 0 36px 0 0;
+	margin: 0 2.25rem 0 0;
+}
+ul.list-icon-ok li:before {
+	padding-left: 10px;
+	padding-left: 0.625rem;
+}
+ul.list-icon-file li:before {
+	padding-left: 10px;
+	padding-left: 0.625rem;
+}
+ul.list-icon-hand-right li:before {
+	padding: 0 0 5px 10px;
+	padding: 0 0 0.3125rem 0.625rem;
+}
+
+
+/* 13.0 Media
+-------------------------------------------------------------- */
+
+/* 13.1 Images */
+
+/* Responsive images */
+
+/* 13.2 Captions */
+
+.wp-caption .wp-caption-text,
+.wp-caption-dd {
+	text-align: right;
+}
+
+/* 13.3 Galleries */
+
+.gallery-item {
+	float: right;
+	margin: 0 0 7px 4px;
+	margin: 0 0 0.4375rem 0.25rem;
+}
+.gallery-columns-1 .gallery-item:nth-of-type(1n),
+.gallery-columns-2 .gallery-item:nth-of-type(2n),
+.gallery-columns-3 .gallery-item:nth-of-type(3n),
+.gallery-columns-4 .gallery-item:nth-of-type(4n),
+.gallery-columns-5 .gallery-item:nth-of-type(5n),
+.gallery-columns-6 .gallery-item:nth-of-type(6n),
+.gallery-columns-7 .gallery-item:nth-of-type(7n),
+.gallery-columns-8 .gallery-item:nth-of-type(8n),
+.gallery-columns-9 .gallery-item:nth-of-type(9n) {
+	margin-left: 0;
+}
+.gallery-columns-1.gallery-size-medium figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-1.gallery-size-thumbnail figure.gallery-item:nth-of-type(1n+1),
+.gallery-columns-2.gallery-size-thumbnail figure.gallery-item:nth-of-type(2n+1),
+.gallery-columns-3.gallery-size-thumbnail figure.gallery-item:nth-of-type(3n+1),
+.gallery-columns-4.gallery-size-thumbnail figure.gallery-item:nth-of-type(4n+1),
+.gallery-columns-5.gallery-size-thumbnail figure.gallery-item:nth-of-type(5n+1),
+.gallery-columns-6.gallery-size-thumbnail figure.gallery-item:nth-of-type(6n+1),
+.gallery-columns-7.gallery-size-thumbnail figure.gallery-item:nth-of-type(7n+1) {
+	clear: right;
+}
+
+
+/* 14.0 Other styles
+-------------------------------------------------------------- */
+
+/* 14.1 Twitter Bootstrap style alerts. Usage: http://getbootstrap.com/components/#alerts */
+
+/* For fully functioning, dismissible alerts, you must use the alerts JavaScript plugin:
+ * @link http://getbootstrap.com/javascript/#alerts
+ */
+.alert-dismissable,
+.alert-dismissible {
+  padding-left: 35px;
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+  left: -21px;
+}
