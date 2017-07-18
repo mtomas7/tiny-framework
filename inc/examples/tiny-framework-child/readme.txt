@@ -1,8 +1,8 @@
 === Tiny Framework Child Example ===
 Contributors: TomasM
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.7.2
-Version: 2.3.1
+Tested up to: WordPress 4.8.0
+Version: 2.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, blog, e-commerce, education
