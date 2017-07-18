@@ -9,7 +9,8 @@
  * @package Tiny_Framework
  * @since Tiny Framework 1.0
  */
-?><!doctype html>
+?>
+<!doctype html>
 
 <?php tha_html_before(); // custom action hook ?>
 
@@ -22,17 +23,17 @@
 <!--<![endif]-->
 <head>
 
-<?php tha_head_top(); // custom action hook ?>
+	<?php tha_head_top(); // custom action hook ?>
 
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="profile" href="http://microformats.org/profile/specs" />
-<link rel="profile" href="http://microformats.org/profile/hatom" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="profile" href="http://microformats.org/profile/specs" />
+	<link rel="profile" href="http://microformats.org/profile/hatom" />
 
-<?php tha_head_bottom(); // custom action hook ?>
+	<?php tha_head_bottom(); // custom action hook ?>
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 
 </head>
 
