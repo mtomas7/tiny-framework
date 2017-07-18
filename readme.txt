@@ -636,7 +636,7 @@ Installation components:
 - Added security option to functions.php of the child theme: Disable XML-RPC service.
 
 ### Fixed
-- Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in additional paragraph, sometimes leaves the text as it is.
+- Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
 - Replace underscore with hyphen in script handle (via Underscores)
 	https://github.com/Automattic/_s/commit/d1f1f3098352713c80b3c2e5ef5fc9d86ad71d52
 

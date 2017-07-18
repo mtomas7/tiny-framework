@@ -1,0 +1,46 @@
+.aligncenter {
+	@include center-block;
+}
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
+img.aligncenter,
+.wp-caption.aligncenter {
+	margin: 24px auto 24px auto;
+	margin: 1.5rem auto 1.5rem auto;
+}
+img.alignleft,
+figure.wp-caption.alignleft,
+.wp-caption.alignleft {
+	margin: 12px 24px 12px 0;
+	margin: 0.75rem 1.5rem 0.75rem 0;
+}
+img.alignright,
+figure.wp-caption.alignright,
+.wp-caption.alignright {
+	margin: 12px 0 12px 24px;
+	margin: 0.75rem 0 0.75rem 1.5rem;
+}
+/* Prevent very large image with a caption and without alignment overflowing the content */
+img.alignnone,
+figure.wp-caption.alignnone {
+	margin: 24px auto 24px auto;
+	margin: 1.5rem auto 1.5rem auto;
+}
+/* Do not add top margin if image is at the top of the post */
+.entry-content figure.aligncenter:first-child,
+.entry-content figure.alignnone:first-child,
+.entry-content img.aligncenter:first-child,
+.entry-content img.alignnone:first-child {
+	margin-top: 0;
+}
+div.wp-caption.alignright img[class*="wp-image-"],
+div.wp-caption.alignright .wp-caption-text,
+figure.alignright .wp-caption-text,
+figure.alignright img[class*="wp-image-"] {
+	padding-left: 0;
+	padding-right: 0;
+}

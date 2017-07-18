@@ -1,0 +1,52 @@
+.clear {
+	*zoom: 1;
+}
+.clear:after,
+.clear:before,
+.comment-content:after,
+.comment-content:before,
+.comment-navigation:after,
+.comment-navigation:before,
+.content-area nav:after,
+.content-area nav:before,
+.entry-content:after,
+.entry-content:before,
+.entry-summary:after,
+.entry-summary:before,
+.format-status .entry-header:after,
+.format-status .entry-header:before,
+.gallery:after,
+.gallery:before,
+.site:after,
+.site:before,
+.site-content:after,
+.site-content:before,
+.site-footer:after,
+.site-footer:before,
+.site-header:after,
+.site-header:before,
+.textwidget:after,
+.textwidget:before {
+	@include clearfix;
+}
+.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter,
+.clear:after,
+.comment-content:after,
+.comment-navigation:after,
+.content-area nav:after,
+.entry-content:after,
+.entry-meta,
+.entry-meta:after,
+.entry-summary:after,
+.format-status .entry-header:after,
+.gallery:after,
+.main-navigation:after,
+.site:after,
+.site-content:after,
+.site-footer:after,
+.site-header:after,
+.textwidget:after {
+	@include clearfix-after;
+}

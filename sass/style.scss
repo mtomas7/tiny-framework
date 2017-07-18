@@ -1,0 +1,310 @@
+/*!
+Theme Name: Tiny Framework
+Theme URI: http://mtomas.com/1/
+Author: Tomas Mackevicius
+Author URI: http://mtomas.com/
+Description: Tiny Framework theme was created with the future in mind and encompasses all the best features of the default WordPress themes in one place, adds full accessibility and Structured Data Markup with Schema.org microdata format support. Fast start is ensured with very extensive documentation! Tiny Framework features elegant responsive mobile-first design, HTML5 ready structure of Underscores, custom per-post headers, custom logo, three footer widgets, FontAwesome icon webfont and Google Fonts support. Web developers will enjoy integrated Theme Hook Alliance custom action hooks. It's all there, you have everything in one neat package. Along with the main theme you will find an example of a child theme - an easy way to start developing with child themes! Tiny Framework can be used as a learning tool or your own little web development "framework". With its unique "Coding Tips System" Tiny Framework helps to understand how to extend parent themes and build your own child themes, hacking them the way you want. You get the best coding examples from default WordPress themes and the best hacks from the child theme. Please read readme.txt for a quick start guide, tips and tricks. For more information please see: http://mtomas.com/1/
+Version: 2.3.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, blog, e-commerce, education
+Text Domain: tiny-framework
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     16;
+$line-height: 24;
+
+We use rem for: font-size, margin, padding, width, max-width when using in px.
+
+For easy calculation you may use this tool, set "Choose your <HTML> font-size (px)" to 16:
+@link https://offroadcode.com/prototypes/rem-calculator/
+
+---------- Examples
+
+	padding: 5px 0;
+	padding: 0.3125rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size:
+
+	font-size: 16px
+	font-size: 1rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.5rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+To calculate golden ratio for font size and line height you will need these tools:
+
+http://www.pearsonified.com/typography/
+
+Sizes in rem units for quick reference:
+
+ 1px: 0.0625rem
+ 2px: 0.125rem
+ 3px: 0.1875rem
+ 4px: 0.25rem
+ 5px: 0.3125rem
+ 6px: 0.375rem
+ 7px: 0.4375rem
+ 8px: 0.5rem
+ 9px: 0.5625rem
+10px: 0.625rem
+11px: 0.6875rem
+12px: 0.75rem
+13px: 0.8125rem
+14px: 0.875rem
+15px: 0.9375rem
+16px: 1rem
+17px: 1.0625rem
+18px: 1.125rem
+19px: 1.1875rem
+20px: 1.25rem
+21px: 1.3125rem
+22px: 1.375rem
+23px: 1.4375rem
+24px: 1.5rem
+25px: 1.5625rem
+26px: 1.625rem
+27px: 1.6875rem
+28px: 1.75rem
+29px: 1.8125rem
+30px: 1.875rem
+31px: 1.9375rem
+32px: 2rem
+33px: 2.0625rem
+34px: 2.125rem
+35px: 2.1875rem
+36px: 2.25rem
+37px: 2.3125rem
+38px: 2.375rem
+39px: 2.4375rem
+40px: 2.5rem
+41px: 2.5625rem
+42px: 2.625rem
+43px: 2.6875rem
+44px: 2.75rem
+45px: 2.8125rem
+46px: 2.875rem
+47px: 2.9375rem
+48px: 3rem
+*/
+
+/* Accessibility: Colors
+ * All major background and text colors are recorded here.
+ * Border and shadow colors are defined using rgba values.
+ * Color contrast must meet a minimum of 4.5:1 luminosity ratio, or 3:1 for text rendered larger than 18pt/14pt bold
+ *
+ * For links:
+ * A 4.5:1 contrast between the link text color and the background.
+ * A 3:1 contrast between the link text color and the surrounding non-link text color.
+ * More info at: http://webaim.org/blog/wcag-2-0-and-link-colors/
+ */
+
+/* Site colors
+Green for icon-font: #6ba420
+Green for blockquote: #6ba420
+Orange for widget titles and hover link state: #ff6111
+
+Body text color: #222
+
+Content links:
+
+Link: #0066df
+Visited: #800080
+Hover, active: #dd3811
+
+Headings: #333
+
+Entry title:
+
+In mobile view: #333
+Link, visited: #000
+Hover, active: #ff6111
+
+Meta, comment links:
+
+Link, visited: #555
+Hover, active: #dd3811
+
+Sidebar and footer links:
+
+Link, visited: #555
+Hover, active: #dd3811
+Current and parent categories: #dd3811
+*/
+
+/* Table of Contents:
+ *
+ * 1.0 Normalize
+ * 2.0 Typography
+ * 3.0 Elements
+ *   3.1 FontAwesome webfont
+ * 4.0 Forms
+ *   4.1 General styles first
+ *   4.2 Buttons
+ *   4.3 Twitter Bootstrap style button
+ * 5.0 Navigation
+ *   5.1 Links
+ *   5.2 Menus
+ *   5.3 Post, archive navigation
+ * 6.0 Accessibility
+ * 7.0 Alignments
+ * 8.0 Clearings
+ * 9.0 Widgets
+ *   9.1 General widget styles
+ *   9.2 Specific widget styles
+ *   9.3 Footer widget styles
+ * 10.0 Header
+ *    10.1 Site Header
+ * 11.0 Content
+ *    11.1 Posts and pages
+ *    11.2 Post Formats
+ *    11.3 Comments
+ *    11.4 Page templates
+ * 12.0 Footer
+ * 13.0 Media
+ *    13.1 Images
+ *    13.2 Captions
+ *    13.3 Galleries
+ * 14.0 Other styles
+ *    14.1 Twitter Bootstrap style alerts
+ *    14.2 Misc. styles
+ * 15.0 Media queries
+ *    15.0a Maximum width of 800 pixels
+ *    15.0b Maximum width of 782 pixels - it only affects the mobile view
+ *    15.0c Maximum width of 320 pixels - it only affects the mobile view
+ *    15.1 Minimum width of 783 pixels (small screens - mobile phones, small tablets in portrait view mode)
+ *    15.2 Minimum width of 1100 pixels (average size screens - monitors, small tablets in landscape view mode, larger tablets)
+ *    15.3 Minimum width of 1240 pixels (big screens - widescreen monitors, high resolution tablets)
+ *    15.4 Retina-specific styles. This style cannot be processed by LESS
+ * 16.0 Print
+ *    16.1 Comments
+ *
+ * ----------------------------------------------------------------------------
+ */
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# 1.0 Normalize
+--------------------------------------------------------------*/
+/* @import "normalize"; */
+
+/*--------------------------------------------------------------
+# 2.0 Typography
+--------------------------------------------------------------*/
+/* @import "typography/typography"; */
+
+/*--------------------------------------------------------------
+# 3.0 Elements
+--------------------------------------------------------------*/
+/* @import "elements/elements"; */
+
+/*--------------------------------------------------------------
+# 3.1 FontAwesome webfont
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# 4.0 Forms
+--------------------------------------------------------------*/
+/* @import "forms/forms"; */
+
+/*--------------------------------------------------------------
+# 5.0 Navigation
+--------------------------------------------------------------*/
+/* @import "navigation/navigation"; */
+
+/*--------------------------------------------------------------
+# 6.0 Accessibility
+--------------------------------------------------------------*/
+/* @import "modules/accessibility"; */
+
+/*--------------------------------------------------------------
+# 7.0 Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# 8.0 Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# 9.0 Widgets
+--------------------------------------------------------------*/
+/* @import "site/secondary/widgets"; */
+
+/*--------------------------------------------------------------
+# 10.0 Header
+--------------------------------------------------------------*/
+/* @import "site/site"; */
+
+/*--------------------------------------------------------------
+# 11.0 Content
+--------------------------------------------------------------*/
+/* @import "site/site"; */
+
+/*--------------------------------------------------------------
+# 12.0 Footer
+--------------------------------------------------------------*/
+/* @import "site/site"; */
+
+/*--------------------------------------------------------------
+# 13.0 Media
+--------------------------------------------------------------*/
+/* @import "media/media"; */
+
+/*--------------------------------------------------------------
+# 14.0 Other styles
+--------------------------------------------------------------*/
+/* @import "media/media"; */
+
+/*--------------------------------------------------------------
+# 14.1 Twitter Bootstrap style alerts
+--------------------------------------------------------------*/
+/* @import "media/media"; */
+
+/*--------------------------------------------------------------
+# 14.2 Misc. styles
+--------------------------------------------------------------*/
+/* @import "media/media"; */
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+/* @import "modules/infinite-scroll"; */
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* @import "modules/infinite-scroll"; */
+
+/*--------------------------------------------------------------
+# 15.0 Media queries
+--------------------------------------------------------------*/
+/* @import "media/media"; */
+
+/*--------------------------------------------------------------
+# 16.0 Print
+--------------------------------------------------------------*/
+/* @import "media/media"; */
