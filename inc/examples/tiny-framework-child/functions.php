@@ -48,6 +48,7 @@
  *    4.1 - Tip09 - Remove WordPress version info from head and feeds - disabled by default.
  *    4.2 - Tip84 - Remove error message on the login page - disabled by default.
  *    4.3 - Tip92 - Require authentication for all REST API requests - limit REST API exposure to bad guys.
+ *    4.4 - Disable XML-RPC service.
  *  5.0 - Other functions.
  *    5.1 - Tip08 - Remove junk from head - disabled by default.
  *    5.2 - Tip82 - No more jumping for read more link - disabled by default.
@@ -462,6 +463,22 @@ add_filter( 'rest_authentication_errors', function( $result ) {
 	return $result;
 });
 */
+
+/**
+ * 4.4 - Disable XML-RPC service.
+ *
+ * @link http://www.wpbeginner.com/plugins/how-to-disable-xml-rpc-in-wordpress/
+ *
+ * @link https://www.wordfence.com/blog/2015/10/should-you-disable-xml-rpc-on-wordpress/
+ *
+ * In case you need to have XML-RPC service active, please use a plugin to protect your login form from a brute force attacks:
+ *
+ * @link https://wordpress.org/plugins/loginizer/
+ *
+ * @link https://wordpress.org/plugins/login-lockdown/
+ */
+
+// add_filter('xmlrpc_enabled', '__return_false');
 
 
 
