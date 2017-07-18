@@ -634,6 +634,7 @@ Installation components:
 
 ### Added
 - Added security option to functions.php of the child theme: Disable XML-RPC service.
+- Added SASS support.
 
 ### Fixed
 - Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
