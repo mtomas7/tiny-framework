@@ -11,8 +11,11 @@ Theme URI: http://mtomas.com/1/
 Theme URI (GitHub): https://github.com/mtomas7/tiny-framework
 Author: Tomas Mackevicius
 Author URI: http://mtomas.com
-Donate link: http://mtomas.com/about-me/
 Copyright: Tomas Mackevicius (see Copyright section below for more details)
+
+To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services@mtomas.com):
+
+Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYA7XMLU8ENS2&lc=US&item_name=Free-WordPress-themes-by-TomasM&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 
 
 == Description ==
@@ -23,12 +26,6 @@ Tiny Framework features elegant responsive mobile-first design, HTML5 ready stru
 Tiny Framework can be used as a learning tool or your own little web development "framework" a.k.a. "starter theme". With its unique "Coding Tips System" Tiny Framework helps to understand how to extend parent themes and build your own child themes, hacking them the way you want. Along with the main theme you will find an example of a child theme - an easy way to start developing with child themes! You get the best coding examples from default WordPress themes and the best hacks from the child theme.
 
 For more information about Tiny Framework please go to http://mtomas.com/1/
-
-== Donate Link ==
-
-To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services@mtomas.com):
-
-https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYA7XMLU8ENS2&lc=US&item_name=Free-WordPress-themes-by-TomasM&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 
 
 == Installation ==
@@ -51,7 +48,7 @@ Need personalized (paid) support? If you need a help extending or modifying this
 
 	http://mtomas.com/wordpress-theme-support-consultation/
 
-	Tomas Mackevicius - http://mtomas.com - services@mtomas.com - @TomasMack
+	Twitter: @TomasMack
 
 
 Overview of main theme features
@@ -224,7 +221,7 @@ Example for single.php
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div id="content" class="site-content">
 			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+				<main id="main" class="site-main">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 						<header class="entry-header">
 							<h1 class="entry-title">
@@ -249,7 +246,7 @@ Archive example for category.php
 
 			...
 			<section id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+				<main id="main" class="site-main">
 					<header class="page-header">
 						<h1 class="page-title">
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -525,7 +522,7 @@ Info: web accessibility features.
 Stargazer WordPress Theme, Copyright (C) by Justin Tadlock.
 License: GNU GPL v2 or later.
 Source: https://wordpress.org/themes/stargazer
-Source: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 */
+Source: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2
 Info: social media menu code.
 
 Twenty Thirteen WordPress Theme, Copyright (C) the WordPress team.
@@ -1364,6 +1361,6 @@ Want to write better changelogs? See: https://github.com/olivierlacan/keep-a-cha
 
 == Happy coding! ==
 
-Tomas Mackevicius http://mtomas.com - services@mtomas.com - @TomasMack
+Tomas Mackevicius http://mtomas.com - Twitter: @TomasMack
 
 "Ut In Omnibus Glorificetur Deus" ~Saint Benedict of Nursia
