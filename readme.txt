@@ -1359,8 +1359,7 @@ Want to write better changelogs? See: https://github.com/olivierlacan/keep-a-cha
 ### Security (invite users to upgrade in case of vulnerabilities)
 
 
-== Happy coding! ==
-
-Tomas Mackevicius http://mtomas.com - Twitter: @TomasMack
+Happy coding!
+=============
 
 "Ut In Omnibus Glorificetur Deus" ~Saint Benedict of Nursia

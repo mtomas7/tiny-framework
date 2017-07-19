@@ -583,8 +583,7 @@ Footer widget stacking improvement by Steven Stern: http://www.sterndata.com/blo
 Set default Tiny Framework header image. By Paulwpxp: https://wordpress.org/support/topic/setting-default-header-image-in-child-theme
 
 
-== Happy coding! ==
-
-Tomas Mackevicius http://mtomas.com - Twitter: @TomasMack
+Happy coding!
+=============
 
 *"Ut In Omnibus Glorificetur Deus" ~Saint Benedict of Nursia*
