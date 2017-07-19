@@ -2,15 +2,20 @@ Tiny Framework
 ==============
 
 License: GNU General Public License v2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Theme URI: http://mtomas.com/1/
+
 Theme URI (GitHub): https://github.com/mtomas7/tiny-framework
+
 Author: Tomas Mackevicius
+
 Author URI: http://mtomas.com
+
 Copyright: Tomas Mackevicius (see Copyright section below for more details)
 
-To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services@mtomas.com):
+To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services [at] mtomas.com):
 
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYA7XMLU8ENS2&lc=US&item_name=Free-WordPress-themes-by-TomasM&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 
@@ -209,52 +214,52 @@ This might help you when applying CSS rules to see the "Cascades" of Cascading S
 Example for single.php
 ----------------------
 
-<body <?php body_class(); ?>>
-	<div id="page" class="hfeed site">
-		<header id="masthead" class="site-header" role="banner">
-			<div class="site-branding">
-				<a class="site-logo-link" rel="home" href="">
-					<img class="site-logo attachment-thumbnail" data-size="thumbnail">
-				<div id="site-title-wrapper">
-					<h1 class="site-title">
-					<h2 class="site-description">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-		<div id="content" class="site-content">
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main">
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							<h1 class="entry-title">
-							<div class="entry-meta">
-						<div class="entry-content">
-			<aside id="secondary" class="widget-area" role="complementary">
-				<section id="recent-posts-5" class="widget widget_recent_entries">
-					<h3 class="widget-title">Recent Articles</h2>
-						<ul>
-							<li>
-		<footer id="colophon" class="clear" role="contentinfo">
-			<div id="footer-widgets" class="widget-area three">
-				<div id="footer-widget-left">
-					<section id="recent-posts-4" class="widget widget_recent_entries">
-						<h3 class="widget-title">Recent articles</h2>
-							<ul>
-								<li>
+&Tab;&lt;body &lt;?php body_class(); ?&gt;&gt;
+&Tab;&Tab;&lt;div id=&quot;page&quot; class=&quot;hfeed site&quot;&gt;
+&Tab;&Tab;&Tab;&lt;header id=&quot;masthead&quot; class=&quot;site-header&quot; role=&quot;banner&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;div class=&quot;site-branding&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;a class=&quot;site-logo-link&quot; rel=&quot;home&quot; href=&quot;&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;img class=&quot;site-logo attachment-thumbnail&quot; data-size=&quot;thumbnail&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div id=&quot;site-title-wrapper&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h1 class=&quot;site-title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h2 class=&quot;site-description&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;nav id=&quot;site-navigation&quot; class=&quot;main-navigation&quot; role=&quot;navigation&quot;&gt;
+&Tab;&Tab;&Tab;&lt;div id=&quot;content&quot; class=&quot;site-content&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;div id=&quot;primary&quot; class=&quot;content-area&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;main id=&quot;main&quot; class=&quot;site-main&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;article id=&quot;post-&lt;?php the_ID(); ?&gt;&quot; &lt;?php post_class(); ?&gt;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;header class=&quot;entry-header&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h1 class=&quot;entry-title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class=&quot;entry-meta&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div class=&quot;entry-content&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;aside id=&quot;secondary&quot; class=&quot;widget-area&quot; role=&quot;complementary&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;section id=&quot;recent-posts-5&quot; class=&quot;widget widget_recent_entries&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;widget-title&quot;&gt;Recent Articles&lt;/h2&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;ul&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;li&gt;
+&Tab;&Tab;&Tab;&lt;footer id=&quot;colophon&quot; class=&quot;clear&quot; role=&quot;contentinfo&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;div id=&quot;footer-widgets&quot; class=&quot;widget-area three&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&lt;div id=&quot;footer-widget-left&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;section id=&quot;recent-posts-4&quot; class=&quot;widget widget_recent_entries&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;h3 class=&quot;widget-title&quot;&gt;Recent articles&lt;/h2&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;ul&gt;
+&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&Tab;&lt;li&gt;
 
 
 Archive example for category.php
 --------------------------------
 
-			...
-			<section id="primary" class="content-area">
-				<main id="main" class="site-main">
-					<header class="page-header">
-						<h1 class="page-title">
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							<h1 class="entry-title">
-							<div class="entry-meta">
-						<div class="entry-content">
-			...
+...
+&lt;section id=&quot;primary&quot; class=&quot;content-area&quot;&gt;
+&Tab;&lt;main id=&quot;main&quot; class=&quot;site-main&quot;&gt;
+&Tab;&Tab;&lt;header class=&quot;page-header&quot;&gt;
+&Tab;&Tab;&Tab;&lt;h1 class=&quot;page-title&quot;&gt;
+&Tab;&Tab;&lt;article id=&quot;post-&lt;?php the_ID(); ?&gt;&quot; &lt;?php post_class(); ?&gt;&gt;
+&Tab;&Tab;&Tab;&lt;header class=&quot;entry-header&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;h1 class=&quot;entry-title&quot;&gt;
+&Tab;&Tab;&Tab;&Tab;&lt;div class=&quot;entry-meta&quot;&gt;
+&Tab;&Tab;&Tab;&lt;div class=&quot;entry-content&quot;&gt;
+...
 
 
 Tiny Framework theme at WordPress.org

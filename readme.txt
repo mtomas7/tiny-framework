@@ -13,7 +13,7 @@ Author: Tomas Mackevicius
 Author URI: http://mtomas.com
 Copyright: Tomas Mackevicius (see Copyright section below for more details)
 
-To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services@mtomas.com):
+To support future development of this theme you can contribute directly by donating with PayPal (if you prefer, you can visit PayPal.com directly and send a payment to services [at] mtomas.com):
 
 Donate link:  https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=CYA7XMLU8ENS2&lc=US&item_name=Free-WordPress-themes-by-TomasM&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
 
