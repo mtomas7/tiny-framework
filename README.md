@@ -47,13 +47,13 @@ Support
 
 WordPress.org - free, but very limited support forum, that deals only with the issues of existing theme code:
 
-	https://wordpress.org/support/theme/tiny-framework
+https://wordpress.org/support/theme/tiny-framework
 
 Need personalized (paid) support? If you need a help extending or modifying this theme, you can always contact me for a commercial support:
 
-	http://mtomas.com/wordpress-theme-support-consultation/
+http://mtomas.com/wordpress-theme-support-consultation/
 
-	Twitter: @TomasMack
+Twitter: @TomasMack
 
 
 Overview of main theme features
@@ -91,9 +91,9 @@ Quick start guide
 
 First choice is good for users who will do only small changes, that can be achieved by modifying CSS styles. In this case you would append new CSS styles with the help of a plugin. If you're using popular Jetpack plugin suite, it has a Custom CSS module, other plugins to consider:
 
-	https://wordpress.org/plugins/simple-custom-css/
+https://wordpress.org/plugins/simple-custom-css/
 
-	https://wordpress.org/plugins/imporved-simpler-css/
+https://wordpress.org/plugins/imporved-simpler-css/
 
 With the arrival of new theme version, you could update theme, because all your custom CSS styles would be safely stored in the database.
 
