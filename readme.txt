@@ -590,7 +590,7 @@ Related themes:
 
 Underscores    - 1.0   - 2017-07-18 - https://github.com/Automattic/_s/
 Twenty Twelve  - 2.2   - 2017-07-18 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentytwelve?order=date&desc=1
-Twenty Fifteen - 1.7   - 2017-06-28 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentyfifteen?order=date&desc=1
+Twenty Fifteen - 1.7   - 2017-07-18 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentyfifteen?order=date&desc=1
 
 
 Other components:
