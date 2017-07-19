@@ -116,11 +116,9 @@ https://codex.wordpress.org/Child_Themes
 drag a standard Text widget from the left side to the widget area, enter your copyright text in the text field
 (leave the title field empty):
 
-	`
-	&copy; 2015 Your Name. All rights reserved
-	`
-
-	P.S. please do not copy backticks - they are here to make this document compatible with Markdown syntax.
+`
+&copy; 2015 Your Name. All rights reserved
+`
 
 
 3. Go to Theme Customizer (Admin Panel Menu > Appearance > Customize) and see if you need to change any visual aspects of your site.
@@ -139,17 +137,15 @@ Then you can add your social profiles as Links. By default social icons would be
 
 If you want to use icon webfont for social networks in widgets and other places, use standard text widget in the Main Sidebar Widget (same instructions as with Footer Copyright Widget) with text like this:
 
-	```
-	<a href="http://address-to-about-me-page" class="icon-webfont social-link fa-pencil"><span class="screen-reader-text">Contact me</span></a>
-	<a href="http://address-to-facebook-account" class="icon-webfont social-link fa-facebook-square"><span class="screen-reader-text">Facebook</span></a>
-	<a href="http://www.linkedin.com/in/your-profile/" class="icon-webfont social-link fa-linkedin-square"><span class="screen-reader-text">LinkedIn</span></a>
-	<a href="http://profiles.wordpress.org/your-wp-name" class="icon-webfont social-link fa-wordpress"><span class="screen-reader-text">WordPress.org</span></a>
-	<a href="http://twitter.com/your-twitter-handle" class="icon-webfont social-link fa-twitter"><span class="screen-reader-text">Twitter</span></a>
-	<a href="https://plus.google.com/your-g-plus-account-number" class="icon-webfont social-link fa-google-plus-square" rel="author"><span class="screen-reader-text">Google+</span></a>
-	<a href="http://github.com/your-github-name" class="icon-webfont social-link fa-github"><span class="screen-reader-text">Github</span></a>
-	```
-
-	P.S. please do not copy backticks - they are here to make this document compatible with Markdown syntax.
+```
+<a href="http://address-to-about-me-page" class="icon-webfont social-link fa-pencil"><span class="screen-reader-text">Contact me</span></a>
+<a href="http://address-to-facebook-account" class="icon-webfont social-link fa-facebook-square"><span class="screen-reader-text">Facebook</span></a>
+<a href="http://www.linkedin.com/in/your-profile/" class="icon-webfont social-link fa-linkedin-square"><span class="screen-reader-text">LinkedIn</span></a>
+<a href="http://profiles.wordpress.org/your-wp-name" class="icon-webfont social-link fa-wordpress"><span class="screen-reader-text">WordPress.org</span></a>
+<a href="http://twitter.com/your-twitter-handle" class="icon-webfont social-link fa-twitter"><span class="screen-reader-text">Twitter</span></a>
+<a href="https://plus.google.com/your-g-plus-account-number" class="icon-webfont social-link fa-google-plus-square" rel="author"><span class="screen-reader-text">Google+</span></a>
+<a href="http://github.com/your-github-name" class="icon-webfont social-link fa-github"><span class="screen-reader-text">Github</span></a>
+```
 
 
 5. Next, open functions.php file in a text editor and find sections:
@@ -587,41 +583,8 @@ Footer widget stacking improvement by Steven Stern: http://www.sterndata.com/blo
 Set default Tiny Framework header image. By Paulwpxp: https://wordpress.org/support/topic/setting-default-header-image-in-child-theme
 
 
-Dependencies (updated to version #)
-===================================
-
-Related themes:
----------------
-
-Underscores    - 1.0   - 2017-07-18 - https://github.com/Automattic/_s/
-Twenty Twelve  - 2.2   - 2017-07-18 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentytwelve?order=date&desc=1
-Twenty Fifteen - 1.7   - 2017-07-18 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentyfifteen?order=date&desc=1
-
-
-Other components:
------------------
-
-normalize.css                   - 7.0.0     - 2017-07-01 - Initial CSS rules       - https://github.com/necolas/normalize.css
-Font Awesome                    - 4.7.0     - 2017-07-01 - Webicon font            - http://fontawesome.io
-Theme Hook Alliance hooks       - 1.0-draft - 2017-07-01 - Custom hooks            - https://github.com/zamoose/themehookalliance
-html5shiv                       - 3.7.3-pre - 2017-07-01 - HTML5 compatibility     - https://github.com/aFarkas/html5shiv
-SemPress                        - 1.5.6     - 2017-07-01 - Microformats v2 support - https://github.com/pfefferle/SemPress/
-Persist Admin notice Dismissals - 1.3       - 2017-07-01 - Dismiss admin notices   - https://github.com/collizo4sky/persist-admin-notices-dismissal
-Bootstrap                       - 3.3.7     - 2017-07-01 - Alert and Button CSS    - http://getbootstrap.com
-
-
-Plugin compatibility:
----------------------
-
-Link Manager              - 0.1-beta  - 2017-07-01 - http://wordpress.org/plugins/link-manager/
-Jetpack                   - 4.1.1     - 2016-08-06 - Infinite Scroll, Sharing  - https://github.com/Automattic/jetpack , http://jetpack.com
-Disable Emojis            - 1.5.3     - 2017-07-01 - https://wordpress.org/plugins/disable-emojis/
-Floating Social Bar       - 1.1.7     - 2015-05-30 - https://wordpress.org/plugins/floating-social-bar/
-Share Buttons by AddToAny - 1.5.6     - 2015-05-30 - https://wordpress.org/plugins/add-to-any/
-
-
 == Happy coding! ==
 
 Tomas Mackevicius http://mtomas.com - Twitter: @TomasMack
 
-"Ut In Omnibus Glorificetur Deus" ~Saint Benedict of Nursia
+*"Ut In Omnibus Glorificetur Deus" ~Saint Benedict of Nursia*
