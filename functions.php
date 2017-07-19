@@ -57,7 +57,7 @@
  *    4.1 - Register sidebars. Register our main widget area, footer widget areas and the front page widget areas.
  *    4.2 - Add Theme Customizer components.
  *    4.3 - Load custom template tags for this theme.
- *    4.4 - Load plugin compatibility file.
+ *    4.4 - Load plugin compatibility files.
  *    4.5 - Schema.org rich snippets (microdata), microformats v2 integration, custom BODY and ARTICLE (post) classes.
  *    4.6 - Return the Google font stylesheet URL if available.
  *    4.7 - Tip89 - Add custom image sizes to the editor.
@@ -433,9 +433,19 @@ require( get_template_directory() . '/inc/customizer.php' );
 // 4.3 - Load custom template tags for this theme.
 require( get_template_directory() . '/inc/template-tags.php' );
 
-// 4.4 - Load plugin compatibility file.
+// 4.4 - Load plugin compatibility files - currently this file serves only as a place holder.
+
+/*
 if ( file_exists( get_template_directory() . '/inc/plugin-compatibility.php' ) ) {
 	require get_template_directory() . '/inc/plugin-compatibility.php';
+}
+*/
+
+/**
+ * Load Jetpack compatibility file.
+ */
+if ( defined( 'JETPACK__VERSION' ) ) {
+	require get_template_directory() . '/inc/plugin-compatibility-jetpack.php';
 }
 
 // 4.5 - Schema.org rich snippets (microdata), microformats v2 integration, custom BODY classes and ARTICLE (post).

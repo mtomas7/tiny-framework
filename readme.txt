@@ -590,7 +590,7 @@ Related themes:
 
 Underscores    - 1.0   - 2017-07-18 - https://github.com/Automattic/_s/
 Twenty Twelve  - 2.2   - 2017-07-18 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentytwelve?order=date&desc=1
-Twenty Fifteen - 1.7   - 2017-07-18 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentyfifteen?order=date&desc=1
+Twenty Fifteen - 1.7   - 2017-06-28 - https://core.trac.wordpress.org/browser/trunk/src/wp-content/themes/twentyfifteen?order=date&desc=1
 
 
 Other components:
@@ -643,6 +643,10 @@ This changelog will include only important changes. To see all changes please vi
 - Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
 - Replace underscore with hyphen in script handle (via Underscores)
 	https://github.com/Automattic/_s/commit/d1f1f3098352713c80b3c2e5ef5fc9d86ad71d52
+
+### Changed
+- Moved Jetpack support funcions to new file. Only include the Jetpack file if Jetpack is available on a site  (via Underscores)
+	https://github.com/Automattic/_s/commit/4a2e99e6915ae93c380317f9149a74c767ea85c2
 
 
 = 2.3.1 =
