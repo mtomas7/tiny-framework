@@ -47,6 +47,10 @@ http://mtomas.com/363/
 Support
 =======
 
+WordPress.org - free, but very limited support forum, that deals only with the issues of existing theme code. It will take time for me to respond, but sometimes community members would help:
+
+	http://mtomas.com/389/tiny-forge-framework-child-themes-comprehensive-guide
+
 WordPress.org - free, but very limited support forum, that deals only with the issues of existing theme code:
 
 	https://wordpress.org/support/theme/tiny-framework
