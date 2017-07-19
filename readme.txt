@@ -8,6 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: one-column, two-columns, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready, blog, e-commerce, education
 
 Theme URI: http://mtomas.com/1/
+Theme URI (WordPress.org): https://wordpress.org/themes/tiny-framework
 Theme URI (GitHub): https://github.com/mtomas7/tiny-framework
 Author: Tomas Mackevicius
 Author URI: http://mtomas.com
@@ -26,6 +27,12 @@ Tiny Framework features elegant responsive mobile-first design, HTML5 ready stru
 Tiny Framework can be used as a learning tool or your own little web development "framework" a.k.a. "starter theme". With its unique "Coding Tips System" Tiny Framework helps to understand how to extend parent themes and build your own child themes, hacking them the way you want. Along with the main theme you will find an example of a child theme - an easy way to start developing with child themes! You get the best coding examples from default WordPress themes and the best hacks from the child theme.
 
 For more information about Tiny Framework please go to http://mtomas.com/1/
+
+
+Tiny Framework theme Showcase
+-----------------------------
+
+http://mtomas.com/363/
 
 
 == Installation ==
@@ -255,18 +262,6 @@ Archive example for category.php
 							<div class="entry-meta">
 						<div class="entry-content">
 			...
-
-
-Tiny Framework theme at WordPress.org
-=====================================
-
-https://wordpress.org/themes/tiny-framework
-
-
-Showcase your Tiny Framework site or mod!
-=========================================
-
-http://mtomas.com/363/
 
 
 Coding tips you will find in Tiny Framework theme and related child themes
