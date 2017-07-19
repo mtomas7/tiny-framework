@@ -363,10 +363,6 @@ Additional tips (81-100)
 - Tip91  - Set Next and Previous post links to be from the same category (taxonomy) as current post (single.php)
 - Tip92  - Require authentication for all REST API requests - limit REST API exposure to bad guys (functions.php) (only in child themes)
 
-For more information please see - How to use Tiny Framework and its child themes: a comprehensive guide:
-
-http://mtomas.com/389/tiny-forge-framework-child-themes-comprehensive-guide
-
 
 Theme localization (Translations)
 =================================
