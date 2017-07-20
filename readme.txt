@@ -629,7 +629,7 @@ This changelog will include only important changes. To see all changes please vi
 
 ### Added
 - Added security option to functions.php of the child theme: Disable XML-RPC service.
-- Added SASS support.
+- Added SASS support. I decided not to replicate whole CSS styles in SASS, but use SASS as a staging step to make easier the customization of a child theme, especially font sizes, colors, etc. - things that are also marked in style.css with Tip88.
 
 ### Fixed
 - Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
