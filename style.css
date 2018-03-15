@@ -522,9 +522,9 @@ tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	-webkit-hyphens: none;
-	   -moz-hyphens: none;
-		-ms-hyphens: none;
-			hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 }
 code {
 	background-color: #f7f7f9;
@@ -750,7 +750,7 @@ ul.list-icon-ok li:before,
 ul.list-icon-file li:before,
 ul.list-icon-hand-right li:before {
 	-moz-osx-font-smoothing: grayscale;
-	 -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 	display: inline-block;
 	font-family: FontAwesome;
 	font-size: 16px;
@@ -962,9 +962,9 @@ textarea {
 	border-radius: 3px;
 	font-family: inherit;
 	-webkit-hyphens: none;
-	   -moz-hyphens: none;
-		-ms-hyphens: none;
-			hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 	line-height: normal;
 	padding: 6px;
 	padding: 0.375rem;
@@ -1009,7 +1009,7 @@ article.post-password-required input[type=submit],
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-/* Twitter Bootstrap .btn style */
+	/* Twitter Bootstrap .btn style */
 	display: inline-block;
 	padding: 6px 12px;
 	margin-bottom: 0;
@@ -1020,16 +1020,16 @@ input[type="submit"] {
 	white-space: nowrap;
 	/*vertical-align: middle;*/
 	-ms-touch-action: manipulation;
-	  touch-action: manipulation;
+	touch-action: manipulation;
 	cursor: pointer;
 	-webkit-user-select: none;
-	 -moz-user-select: none;
-	  -ms-user-select: none;
-		  user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	background-image: none;
 	border: 1px solid transparent;
 	border-radius: 4px;
-/* End - Twitter Bootstrap .btn style */
+	/* End - Twitter Bootstrap .btn style */
 	background-color: #e6e6e6;
 	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
 	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
@@ -1828,21 +1828,21 @@ figure.alignright img[class*="wp-image-"] {
 	padding: 1.5rem 0 0 0;
 }
 #secondary {
-  background: #fff;
-  /* Old browsers */
+	background: #fff;
+	/* Old browsers */
 
-  /* IE10 Consumer Preview */
-  background-image: -ms-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* Mozilla Firefox */
-  background-image: -moz-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* Opera */
-  background-image: -o-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #fbfbfb), color-stop(1, #ffffff));
-  /* Webkit (Chrome 11+) */
-  background-image: -webkit-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* W3C Markup, IE10 Release Preview */
-  background-image: radial-gradient(circle closest-corner at center top, #fbfbfb 0%, #ffffff 100%);
+	/* IE10 Consumer Preview */
+	background-image: -ms-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* Mozilla Firefox */
+	background-image: -moz-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* Opera */
+	background-image: -o-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #fbfbfb), color-stop(1, #ffffff));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* W3C Markup, IE10 Release Preview */
+	background-image: radial-gradient(circle closest-corner at center top, #fbfbfb 0%, #ffffff 100%);
 }
 .site-footer .widget-area {
 	margin: 12px 0 0;
@@ -1864,9 +1864,9 @@ figure.alignright img[class*="wp-image-"] {
 .widget-area .widget {
 	color: #555;
 	-webkit-hyphens: auto;
-	   -moz-hyphens: auto;
-		-ms-hyphens: auto;
-			hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
 	margin-bottom: 24px;
 	margin-bottom: 1.5rem;
 }
@@ -2118,7 +2118,7 @@ figure.alignright img[class*="wp-image-"] {
 	text-align: center;
 }
 #wp-calendar caption {
-    font-weight: bold;
+	font-weight: bold;
 	margin-bottom: 5px;
 	margin-bottom: 0.3125rem;
 }
@@ -2140,11 +2140,11 @@ figure.alignright img[class*="wp-image-"] {
 	text-align: left;
 }
 #wp-calendar a {
-    font-weight: bold;
+	font-weight: bold;
 }
 #wp-calendar #next a,
 #wp-calendar #prev a {
-    font-weight: bold;
+	font-weight: bold;
 }
 .widget_tag_cloud {
 	line-height: 1.2;
@@ -2330,16 +2330,16 @@ body {
 
 .site-content {
 	word-break: normal;
-		word-wrap: break-word;
+	word-wrap: break-word;
 	-ms-word-wrap: break-word; /* For IE8 */
 }
 .content-area article,
 .content-area section { /* section is for 404.php and content-none.php */
 	border-bottom: 4px double #ededed;
 	-webkit-hyphens: none;
-	   -moz-hyphens: none;
-		-ms-hyphens: none;
-			hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
 	margin-bottom: 48px;
 	margin-bottom: 3rem;
 	padding-bottom: 24px;
@@ -2350,10 +2350,15 @@ body {
 .content-area article:last-child,
 .content-area section, /* section is for 404.php and content-none.php */
 .page .content-area article {
-	background-image: none!important;
 	border-bottom: 0;
 	margin-bottom: 24px;
 	margin-bottom: 1.5rem;
+}
+/* Remove the background on articles in the main content area. */
+.attachment .content-area article,
+.content-area article:last-child,
+.page .content-area article {
+	background-image: none!important;
 }
 .archive .content-area article,
 .blog .content-area article,
@@ -2790,7 +2795,7 @@ footer.entry-meta {
 }
 .entry-content .more-link:after,
 .entry-summary .more-link:after {
-    content: "\f101"; /* fa-angle-double-right */
+	content: "\f101"; /* fa-angle-double-right */
 	font-size: inherit;
 	margin-left: 3px;
 	text-decoration: none;
@@ -3286,7 +3291,7 @@ a.comment-reply-link:hover {
 #respond form input[type="url"],
 #respond form textarea {
 	-moz-box-sizing: border-box;
-		 box-sizing: border-box;
+	box-sizing: border-box;
 	font-size: 16px;
 	font-size: 1rem;
 	width: 100%;
@@ -3408,21 +3413,21 @@ a.comment-reply-link:hover {
 	color: #dd3811;
 }
 .site-footer {
-  background: #fff;
-  /* Old browsers */
+	background: #fff;
+	/* Old browsers */
 
-  /* IE10 Consumer Preview */
-  background-image: -ms-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* Mozilla Firefox */
-  background-image: -moz-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* Opera */
-  background-image: -o-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* Webkit (Safari/Chrome 10) */
-  background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #fbfbfb), color-stop(1, #ffffff));
-  /* Webkit (Chrome 11+) */
-  background-image: -webkit-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
-  /* W3C Markup, IE10 Release Preview */
-  background-image: radial-gradient(circle closest-corner at center top, #fbfbfb 0%, #ffffff 100%);
+	/* IE10 Consumer Preview */
+	background-image: -ms-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* Mozilla Firefox */
+	background-image: -moz-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* Opera */
+	background-image: -o-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(radial, center top, 0, center top, 487, color-stop(0, #fbfbfb), color-stop(1, #ffffff));
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-radial-gradient(center top, circle closest-corner, #fbfbfb 0%, #ffffff 100%);
+	/* W3C Markup, IE10 Release Preview */
+	background-image: radial-gradient(circle closest-corner at center top, #fbfbfb 0%, #ffffff 100%);
 }
 .site-info,
 .site-info-2 {
@@ -3954,7 +3959,7 @@ img.no-border {
 /* Hides navigation links and site footer when infinite scroll is active */
 .infinite-scroll.neverending footer,
 .infinite-scroll .pagination {
-    display: none;
+	display: none;
 }
 /* Do not remove content bottom border for the last child of the content listing when Infinite Scroll is active */
 .infinite-scroll.list-view .content-area article:last-child {
@@ -3967,7 +3972,7 @@ img.no-border {
 
 /* Shows the footer again in case all posts have been loaded */
 .infinity-end.neverending footer {
-    display: block;
+	display: block;
 }
 /* div#infinite-handle is the Load more posts button shown for type=click. You can ignore this if your theme will always use type=scroll and will never have any footer widgets. */
 #infinite-handle,
@@ -4049,10 +4054,10 @@ img.no-border {
 @media screen and (max-width: 782px) {
 	/* Make scrollable long menu that extends over the screen limits */
 	.main-navigation.toggled {
-	  background-color: #3a3a3a;
-	  height: 100%;
-	  overflow-y: auto; /* if auto is not working, use scroll */
-	  width: 100%;
+		background-color: #3a3a3a;
+		height: 100%;
+		overflow-y: auto; /* if auto is not working, use scroll */
+		width: 100%;
 	}
 
 	.main-navigation .menu-toggle,
@@ -4576,9 +4581,9 @@ img.no-border {
 
 /* 15.4 Retina-specific styles. This style cannot be processed by LESS */
 @media print,
-	(-o-min-device-pixel-ratio: 5/4),
-	(-webkit-min-device-pixel-ratio: 1.25),
-	(min-resolution: 120dpi) {
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
 	/* Tip10 - Add Twenty Thirteen search form to WordPress nav menu - http://diythemes.com/thesis/rtfm/add-search-form-wp-wordpress-nav-menus/ */
 	.site-header .search-form [type="search"],
 	.site-header .search-form [type="text"] {
