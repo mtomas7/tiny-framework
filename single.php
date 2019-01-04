@@ -20,7 +20,8 @@ get_header(); ?>
 
 			<?php
 			// Start the loop.
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/* Include the post format-specific template for the content. If you want to
 				 * use this in a child theme, then include a file called called content-___.php
@@ -31,16 +32,18 @@ get_header(); ?>
 
 				<?php
 				// Previous/next post navigation.
-				the_post_navigation( array(
-					'next_text'      => '<span class="screen-reader-text">' . esc_html__( 'Next article:', 'tiny-framework' ) . '</span>' .
-						'<span class="post-title">%title</span>',
-					'prev_text'      => '<span class="screen-reader-text">' . esc_html__( 'Previous article:', 'tiny-framework' ) . '</span>' .
-						'<span class="post-title">%title</span>',
-					// Tip91 - Set Next and Previous post links to be from the same category as current post.
-					'in_same_term'   => false,      // Whether link should be in a same taxonomy term. Default false. To activate, set to true.
-					'excluded_terms' => '',         // Array or comma-separated list of excluded term IDs. Default empty.
-					'taxonomy'       => 'category', // Taxonomy, if `$in_same_term` is true. Default 'category'.
-				) );
+				the_post_navigation(
+					array(
+						'next_text'      => '<span class="screen-reader-text">' . esc_html__( 'Next article:', 'tiny-framework' ) . '</span>' .
+							'<span class="post-title">%title</span>',
+						'prev_text'      => '<span class="screen-reader-text">' . esc_html__( 'Previous article:', 'tiny-framework' ) . '</span>' .
+							'<span class="post-title">%title</span>',
+						// Tip91 - Set Next and Previous post links to be from the same category as current post.
+						'in_same_term'   => false,      // Whether link should be in a same taxonomy term. Default false. To activate, set to true.
+						'excluded_terms' => '',         // Array or comma-separated list of excluded term IDs. Default empty.
+						'taxonomy'       => 'category', // Taxonomy, if `$in_same_term` is true. Default 'category'.
+					)
+				);
 				?>
 
 				<?php

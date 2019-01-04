@@ -22,16 +22,20 @@ function tinyframework_customize_register( $wp_customize ) {
 
 	// Use selective refresh to preview changes to site title and tagline.
 	if ( isset( $wp_customize->selective_refresh ) ) {
-		$wp_customize->selective_refresh->add_partial( 'blogname', array(
-			'selector'            => '.site-title > a',
-			'container_inclusive' => false,
-			'render_callback'     => 'tinyframework_customize_partial_blogname',
-		) );
-		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-			'selector'            => '.site-description',
-			'container_inclusive' => false,
-			'render_callback'     => 'tinyframework_customize_partial_blogdescription',
-		) );
+		$wp_customize->selective_refresh->add_partial( 'blogname',
+			array(
+				'selector'            => '.site-title > a',
+				'container_inclusive' => false,
+				'render_callback'     => 'tinyframework_customize_partial_blogname',
+			)
+		);
+		$wp_customize->selective_refresh->add_partial( 'blogdescription',
+			array(
+				'selector'            => '.site-description',
+				'container_inclusive' => false,
+				'render_callback'     => 'tinyframework_customize_partial_blogdescription',
+			)
+		);
 	}
 
 	// Rename the label to "Site Title Color" because this only affects the site title in this theme.

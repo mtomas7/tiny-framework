@@ -22,9 +22,12 @@ get_header(); ?>
 
 			<?php tha_content_top(); // custom action hook ?>
 
-			<?php while ( have_posts() ) : the_post(); // Start the Loop ?>
+			<?php
+			while ( have_posts() ) :
+				the_post(); // Start the Loop ?>
 
-				<?php if ( has_post_thumbnail() ) : ?>
+				<?php
+				if ( has_post_thumbnail() ) : ?>
 
 					<div class="entry-page-image">
 
@@ -32,11 +35,16 @@ get_header(); ?>
 
 					</div><!-- .entry-page-image -->
 
-				<?php endif; ?>
+				<?php
+				endif;
+				?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+			<?php
+			endwhile;
+				// end of the loop.
+			?>
 
 			<?php tha_content_bottom(); // custom action hook ?>
 

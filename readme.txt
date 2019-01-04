@@ -1,7 +1,7 @@
 === Tiny Framework ===
 Contributors: TomasM
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.8.0
+Tested up to: WordPress 5.0.2
 Version: 2.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -619,7 +619,7 @@ This changelog will include only important changes. To see all changes please vi
 	https://github.com/mtomas7/tiny-framework/commits/
 
 = 2.3.2 =
-- Released: 2017-08-01
+- Released: 2019-01-05
 ----------------------
 
 ### Release info
@@ -1357,4 +1357,4 @@ Want to write better changelogs? See: https://github.com/olivierlacan/keep-a-cha
 Happy coding!
 =============
 
-"Ut In Omnibus Glorificetur Deus" ~Saint Benedict of Nursia
+"Ut In Omnibus Glorificetur Deus" ~ "So that in everything God may be glorified." (1 Peter 4:11) ~ Saint Benedict of Nursia

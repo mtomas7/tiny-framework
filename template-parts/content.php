@@ -17,17 +17,21 @@
 
 		<?php tha_entry_top(); // custom action hook ?>
 
-		<?php if ( is_sticky() && is_home() && ! is_paged() ) : ?>
+		<?php
+		if ( is_sticky() && is_home() && ! is_paged() ) : ?>
 
 			<header class="page-header">
 				<h2 class="page-title"><?php esc_html_e( 'Featured article', 'tiny-framework' ); ?></h2>
 			</header><!-- .page-header -->
 
-		<?php endif; ?>
+		<?php
+		endif;
+		?>
 
 		<header class="entry-header">
 
-			<?php if ( is_singular() ) : ?>
+			<?php
+			if ( is_singular() ) : ?>
 
 				<?php the_title( '<h1 class="entry-title" itemprop="headline">', '</h1>' ); ?>
 
@@ -47,7 +51,9 @@
 
 				</div><!-- .entry-meta -->
 
-			<?php else : ?>
+			<?php
+			else :
+			?>
 
 				<?php tinyframework_post_thumbnail(); // Tip40 - Function located in: inc/template-tags.php ?>
 
@@ -55,7 +61,8 @@
 
 					<?php the_title( '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark" itemprop="url">', '</a>' ); ?>
 
-					<?php if ( ! post_password_required() && get_comments_number() ) : ?>
+					<?php
+					if ( ! post_password_required() && get_comments_number() ) : ?>
 
 						<span class="title-comment-meta">
 							<?php
@@ -64,7 +71,10 @@
 							?>
 						</span>
 
-					<?php endif; // have comments ?>
+					<?php
+					endif;
+						// have comments
+					?>
 
 				</h2>
 
@@ -78,15 +88,21 @@
 
 				</div><!-- .entry-meta -->
 
-			<?php endif; // is_single() ?>
+			<?php
+			endif;
+				// is_single()
+			?>
 
 		</header><!-- .entry-header -->
 
-		<?php if ( is_search() ) : ?>
+		<?php
+		if ( is_search() ) : ?>
 
 			<?php tinyframework_excerpt(); // Function located in: inc/template-tags.php ?>
 
-		<?php else : ?>
+		<?php
+		else :
+		?>
 
 			<div class="entry-content" itemprop="articleBody">
 
@@ -98,7 +114,9 @@
 
 			</div><!-- .entry-content -->
 
-		<?php endif; ?>
+		<?php
+		endif;
+		?>
 
 		<footer class="entry-meta">
 

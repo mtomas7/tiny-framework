@@ -18,7 +18,8 @@ get_header(); ?>
 
 			<?php tha_content_top(); // custom action hook ?>
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		if ( have_posts() ) : ?>
 
 			<header class="page-header">
 
@@ -31,7 +32,8 @@ get_header(); ?>
 
 			<?php
 			// Start the Loop
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/* Run the loop for the search to output the results.
 				 *
@@ -52,11 +54,17 @@ get_header(); ?>
 
 			<?php tinyframework_archive_page_nav(); // Function located in: inc/template-tags.php ?>
 
-		<?php else : // If no content, include the "No posts found" template. ?>
+		<?php
+		else :
+			// If no content, include the "No posts found" template.
+		?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; // end have_posts() check ?>
+		<?php
+		endif;
+			// end have_posts() check
+		?>
 
 			<?php tha_content_bottom(); // custom action hook ?>
 

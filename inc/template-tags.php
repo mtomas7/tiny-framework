@@ -239,12 +239,14 @@ function tinyframework_categorized_blog() {
 	$all_the_cool_cats = get_transient( 'tinyframework_categories' );
 	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
+		$all_the_cool_cats = get_categories(
+			array(
+				'fields'     => 'ids',
 
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
+				// We only need to know if there is more than one category.
+				'number'     => 2,
+			)
+		);
 
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
@@ -324,9 +326,12 @@ function tinyframework_comment( $comment, $args, $depth ) {
 				?>
 			</header><!-- .comment-meta -->
 
-			<?php if ( '0' == $comment->comment_approved ) : ?>
+			<?php
+			if ( '0' == $comment->comment_approved ) : ?>
 				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'tiny-framework' ); ?></p>
-			<?php endif; ?>
+			<?php
+			endif;
+			?>
 
 			<section class="comment-content p-summary p-name" itemprop="text name description">
 				<?php comment_text(); ?>
@@ -334,12 +339,16 @@ function tinyframework_comment( $comment, $args, $depth ) {
 			</section><!-- .comment-content -->
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array(
-					'reply_text' => esc_html__( 'Reply', 'tiny-framework' ),
-					'after'      => ' <span>&darr;</span>',
-					'depth'      => $depth,
-					'max_depth'  => $args['max_depth'],
-					) ) );
+				<?php comment_reply_link(
+					array_merge( $args,
+						array(
+							'reply_text' => esc_html__( 'Reply', 'tiny-framework' ),
+							'after'      => ' <span>&darr;</span>',
+							'depth'      => $depth,
+							'max_depth'  => $args['max_depth'],
+						)
+					)
+				);
 				?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
@@ -419,7 +428,8 @@ function tinyframework_excerpt( $class = 'entry-summary' ) {
 		<div class="<?php echo $class; ?>" itemprop="description alternativeHeadline">
 			<?php the_excerpt(); ?>
 		</div><!-- .<?php echo $class; ?> -->
-	<?php endif;
+	<?php
+	endif;
 }
 endif;
 
@@ -446,7 +456,8 @@ function tinyframework_excerpt_top( $class = 'entry-summary-top' ) {
 				echo $my_excerpt;
 			?>
 		</div><!-- .<?php echo $class; ?> -->
-	<?php endif;
+	<?php
+	endif;
 }
 endif;
 
@@ -486,14 +497,16 @@ if ( ! function_exists( 'tinyframework_post_pages_nav' ) ) :
  * @since Tiny Framework 2.0.1
  */
 function tinyframework_post_pages_nav() {
-	wp_link_pages( array(
-		'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'tiny-framework' ) . '</span>',
-		'after'       => '</div>',
-		'link_before' => '<span>',
-		'link_after'  => '</span>',
-		'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'tiny-framework' ) . ' </span>%',
-		'separator'   => '<span class="screen-reader-text">, </span>',
-	) );
+	wp_link_pages(
+		array(
+			'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'tiny-framework' ) . '</span>',
+			'after'       => '</div>',
+			'link_before' => '<span>',
+			'link_after'  => '</span>',
+			'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'tiny-framework' ) . ' </span>%',
+			'separator'   => '<span class="screen-reader-text">, </span>',
+		)
+	);
 	//return $content;
 }
 //add_filter ('the_content', 'tinyframework_post_pages_nav');
@@ -507,11 +520,13 @@ if ( ! function_exists( 'tinyframework_archive_page_nav' ) ) :
  * @since Tiny Framework 1.0
  */
 function tinyframework_archive_page_nav() {
-	the_posts_pagination( array(
-		'prev_text'          => esc_html__( 'Previous page', 'tiny-framework' ),
-		'next_text'          => esc_html__( 'Next page', 'tiny-framework' ),
-		'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'tiny-framework' ) . ' </span>',
-	) );
+	the_posts_pagination(
+		array(
+			'prev_text'          => esc_html__( 'Previous page', 'tiny-framework' ),
+			'next_text'          => esc_html__( 'Next page', 'tiny-framework' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'tiny-framework' ) . ' </span>',
+		)
+	);
 }
 endif;
 
@@ -535,15 +550,19 @@ function tinyframework_post_thumbnail() {
 	if ( !is_single() ) : ?>
 
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php the_post_thumbnail( 'medium_large', array(
-			'alt'      => the_title_attribute( 'echo=0' ),
-			'itemprop' => 'image',
-			// 'class'    => 'alignleft',
-			) );
+		<?php the_post_thumbnail( 'medium_large',
+			array(
+				'alt'      => the_title_attribute( 'echo=0' ),
+				'itemprop' => 'image',
+				// 'class'    => 'alignleft',
+			)
+		);
 		?>
 	</a>
 
-	<?php endif; // End !is_single()
+	<?php
+	endif;
+		// End !is_single()
 }
 endif;
 

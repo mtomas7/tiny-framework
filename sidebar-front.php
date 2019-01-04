@@ -15,8 +15,9 @@
  *
  * If none of the sidebars have widgets, then let's bail early.
  */
-if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) )
+if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) ) {
 	return;
+}
 
 // If we get this far, we have widgets. Let do this.
 ?>
@@ -25,7 +26,8 @@ if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) )
 
 <h2 class="screen-reader-text" id="sidebar-header"><?php esc_html_e( 'Main Sidebar', 'tiny-framework' ); ?></h2>
 
-	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+	<?php
+	if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
 
 		<div class="first front-widgets">
 
@@ -33,9 +35,12 @@ if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) )
 
 		</div><!-- .first -->
 
-	<?php endif; ?>
+	<?php
+	endif;
+	?>
 
-	<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+	<?php
+	if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
 
 		<div class="second front-widgets">
 
@@ -43,6 +48,8 @@ if ( ! is_active_sidebar( 'sidebar-2' ) && ! is_active_sidebar( 'sidebar-3' ) )
 
 		</div><!-- .second -->
 
-	<?php endif; ?>
+	<?php
+	endif;
+	?>
 
 </aside><!-- #secondary -->

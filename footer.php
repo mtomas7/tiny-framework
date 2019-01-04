@@ -28,25 +28,37 @@
 			// Three footer widget areas
 			if ( ! is_404() ) : ?>
 
-				<?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
+				<?php
+				if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
 					<div id="footer-widget-left">
 						<?php dynamic_sidebar( 'sidebar-4' ); ?>
 					</div>
-				<?php endif; ?>
+				<?php
+				endif;
+				?>
 
-				<?php if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
+				<?php
+				if ( is_active_sidebar( 'sidebar-5' ) ) : ?>
 					<div id="footer-widget-middle">
 						<?php dynamic_sidebar( 'sidebar-5' ); ?>
 					</div>
-				<?php endif; ?>
+				<?php
+				endif;
+				?>
 
-				<?php if ( is_active_sidebar( 'sidebar-6' ) ) : ?>
+				<?php
+				if ( is_active_sidebar( 'sidebar-6' ) ) : ?>
 					<div id="footer-widget-right">
 						<?php dynamic_sidebar( 'sidebar-6' ); ?>
 					</div>
-				<?php endif; ?>
+				<?php
+				endif;
+				?>
 
-			<?php endif; // is_404() ?>
+			<?php
+			endif;
+				// is_404()
+			?>
 
 		</div><!-- #footer-widgets -->
 
@@ -54,14 +66,17 @@
 
 			<?php // Footer copyright widget area - use standard WordPress text widget with something like this: &copy; 2017 Your Name. All rights reserved ?>
 
-			<?php if ( is_active_sidebar( 'sidebar-7' ) ) : ?>
+			<?php
+			if ( is_active_sidebar( 'sidebar-7' ) ) : ?>
 
 				<div id="copyright-widget">
 					<?php dynamic_sidebar( 'sidebar-7' ); ?>
 				</div>
 				<span class="meta-separator" aria-hidden="true">&bull;</span>
 
-			<?php endif; ?>
+			<?php
+			endif;
+			?>
 
 			<?php do_action( 'tinyframework_credits' ); // Tip87 - custom action hook, see functions.php ?>
 

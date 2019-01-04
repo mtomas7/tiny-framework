@@ -11,7 +11,8 @@
  */
 ?>
 
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
+	<?php
+	if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 
 		<?php tha_sidebars_before(); // custom action hook ?>
 
@@ -31,4 +32,6 @@
 
 		<?php tha_sidebars_after(); // custom action hook ?>
 
-	<?php endif; ?>
+	<?php
+	endif;
+	?>

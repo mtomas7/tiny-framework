@@ -69,11 +69,13 @@
 if ( ! function_exists( 'tinyframework_archive_page_nav' ) ) :
 
 function tinyframework_archive_page_nav() {
-	the_posts_pagination( array(
-		'prev_text'          => esc_html__( 'Newer articles', 'tiny-framework' ),
-		'next_text'          => esc_html__( 'Older articles', 'tiny-framework' ),
-		'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'tiny-framework' ) . ' </span>',
-	) );
+	the_posts_pagination(
+		array(
+			'prev_text'          => esc_html__( 'Newer articles', 'tiny-framework' ),
+			'next_text'          => esc_html__( 'Older articles', 'tiny-framework' ),
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'tiny-framework' ) . ' </span>',
+		)
+	);
 }
 endif;
 */

@@ -20,7 +20,8 @@ get_header(); ?>
 
 		<?php
 			// Start the loop.
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 		?>
 
 			<?php tha_entry_before(); // custom action hook ?>
@@ -97,7 +98,10 @@ get_header(); ?>
 
 			<?php comments_template(); ?>
 
-		<?php endwhile; // end of the loop. ?>
+		<?php
+		endwhile;
+			// end of the loop.
+		?>
 
 		<?php tha_content_bottom(); // custom action hook ?>
 

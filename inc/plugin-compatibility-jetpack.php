@@ -13,17 +13,19 @@
   * See https://jetpack.com/support/infinite-scroll/
   */
  function tinyframework_infinite_scroll_init() {
- 	add_theme_support( 'infinite-scroll', array(
- 		'container'      => 'main',
- 		'render'         => 'tinyframework_infinite_scroll_render',
- 		'footer_widgets' => array(
- 			'sidebar-4',
- 			'sidebar-5',
- 			'sidebar-6',
- 			'sidebar-7',
- 		),
- 		'footer'         => 'page',
- 	) );
+	 add_theme_support( 'infinite-scroll',
+	 	array(
+			'container'      => 'main',
+			'render'         => 'tinyframework_infinite_scroll_render',
+			'footer_widgets' => array(
+				'sidebar-4',
+				'sidebar-5',
+				'sidebar-6',
+				'sidebar-7',
+			),
+			'footer'         => 'page',
+		)
+	);
  }
  add_action( 'after_setup_theme', 'tinyframework_infinite_scroll_init' );
 
@@ -85,11 +87,13 @@ add_action( 'after_setup_theme', 'tinyframework_responsive_videos_setup' );
 
 /*
 function tinyframework_featured_content_init() {
-	add_theme_support( 'featured-content', array(
-		'featured_content_filter' => 'tinyframework_get_featured_posts',
-		'description'             => __( 'The featured content section displays on the front page above the first post in the content area.', 'tiny-framework' ),
-		'max_posts'               => 5,
-	) );
+	add_theme_support( 'featured-content',
+		array(
+			'featured_content_filter' => 'tinyframework_get_featured_posts',
+			'description'             => __( 'The featured content section displays on the front page above the first post in the content area.', 'tiny-framework' ),
+			'max_posts'               => 5,
+		)
+	);
 }
 add_action( 'after_setup_theme', 'tinyframework_featured_content_init' );
 */

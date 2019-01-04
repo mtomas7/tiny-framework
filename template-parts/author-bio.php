@@ -45,7 +45,9 @@
 								?>
 							</a>
 
-						<?php endif; ?>
+						<?php
+						endif;
+						?>
 
 					</p><!-- .author-bio -->
 

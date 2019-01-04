@@ -158,11 +158,13 @@ function tinyframework_setup() {
 	load_theme_textdomain( 'tiny-framework' );
 
 	// 3.2 - This theme styles the visual editor with editor-style.css to match the theme style.
-	add_editor_style( array(
+	add_editor_style(
+		array(
 		'css/editor-style.css',
 		'fonts/font-awesome/css/font-awesome.min.css',
 		tinyframework_fonts_url(),
-	) );
+		)
+	);
 
 	// 3.3 - Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -175,49 +177,57 @@ function tinyframework_setup() {
 	add_theme_support( 'title-tag' );
 
 	// 3.5 - HTML5 support for default core markup.
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-		'widgets',
-	) );
+	add_theme_support( 'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'widgets',
+		)
+	);
 
 	// 3.6 - This theme supports a variety of post formats. See https://developer.wordpress.org/themes/functionality/post-formats/
-	add_theme_support( 'post-formats', array(
-		'aside',
-		'image',
-		'link',
-		'quote',
-		'status',
+	add_theme_support( 'post-formats',
+		array(
+			'aside',
+			'image',
+			'link',
+			'quote',
+			'status',
 
-		// other possible formats (uncomment below if needed):
+			// other possible formats (uncomment below if needed):
 
-		// 'audio',
-		// 'chat',
-		// 'gallery',
-		// 'video',
-	) );
+			// 'audio',
+			// 'chat',
+			// 'gallery',
+			// 'video',
+		)
+	);
 
 	// 3.7 - This theme uses wp_nav_menu() in two locations.
-	register_nav_menus(	array(
-		'primary' => esc_html__( 'Primary Menu', 'tiny-framework' ),
-		'social'  => esc_html__( 'Social Links Menu', 'tiny-framework' ),
-	) );
+	register_nav_menus(
+		array(
+			'primary' => esc_html__( 'Primary Menu', 'tiny-framework' ),
+			'social'  => esc_html__( 'Social Links Menu', 'tiny-framework' ),
+		)
+	);
 
 	// 3.8 - This theme supports custom background color and image, and here we also set up the default background color.
-	add_theme_support( 'custom-background', array(
-		'default-color'      => 'e6e6e6',
-		'default-image'      => '',
+	add_theme_support( 'custom-background',
+		array(
+			'default-color'      => 'e6e6e6',
+			'default-image'      => '',
 
-		// Other custom background settings you might need to use:
+			// Other custom background settings you might need to use:
 
-		// 'default-image'      => get_template_directory_uri() . '/images/background.jpg',
-		// 'default-repeat'     => 'no-repeat',
-		// 'default-position-x' => 'center',
-		// 'default-attachment' => 'fixed',
-	) );
+			// 'default-image'      => get_template_directory_uri() . '/images/background.jpg',
+			// 'default-repeat'     => 'no-repeat',
+			// 'default-position-x' => 'center',
+			// 'default-attachment' => 'fixed',
+		)
+	);
 
 	/* 3.9 - Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -263,16 +273,20 @@ function tinyframework_setup() {
 
 	// If website runs old WordPress version, use old call. Also check: inc/template-tags.php for more details.
 	if ( version_compare( $GLOBALS['wp_version'], '4.5-alpha', '<' ) ) {
-		add_theme_support( 'site-logo', array(
-			'size' => 'full',
-		) );
+		add_theme_support( 'site-logo',
+			array(
+				'size' => 'full',
+			)
+		);
 	} else { // Otherwise use new call.
-		add_theme_support( 'custom-logo', array(
-			'height'      => null, // Allow full flexibility if no size is specified.
-			'width'       => null, // Allow full flexibility if no size is specified.
-			'flex-height' => true,
-			'flex-width'  => true,
-		) );
+		add_theme_support( 'custom-logo',
+			array(
+				'height'      => null, // Allow full flexibility if no size is specified.
+				'width'       => null, // Allow full flexibility if no size is specified.
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
 	}
 
 	// 3.12 - Indicate widget sidebars can use selective refresh in the Customizer.
@@ -294,7 +308,12 @@ add_action( 'after_setup_theme', 'tinyframework_setup' );
  * @link https://github.com/collizo4sky/persist-admin-notices-dismissal
  */
 require( get_template_directory() . '/inc/admin-persist-notices-dismissal.php' );
-add_action( 'admin_init', array( 'PAnD', 'init' ) );
+add_action( 'admin_init',
+	array(
+		'PAnD',
+		'init'
+	)
+);
 
 
 
@@ -351,73 +370,87 @@ add_action( 'template_redirect', 'tinyframework_mod_content_width' );
  * @since Tiny Framework 1.0
  */
 function tinyframework_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Main Sidebar', 'tiny-framework' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Main Sidebar', 'tiny-framework' ),
+			'id'            => 'sidebar-1',
+			'description'   => esc_html__( 'Appears on posts and pages except the optional Front Page template, which has its own widgets', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'First Front Page Widget Area', 'tiny-framework' ),
-		'id'            => 'sidebar-2',
-		'description'   => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'First Front Page Widget Area', 'tiny-framework' ),
+			'id'            => 'sidebar-2',
+			'description'   => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Second Front Page Widget Area', 'tiny-framework' ),
-		'id'            => 'sidebar-3',
-		'description'   => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Second Front Page Widget Area', 'tiny-framework' ),
+			'id'            => 'sidebar-3',
+			'description'   => esc_html__( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'First Footer Widget Area', 'tiny-framework' ),
-		'id'            => 'sidebar-4',
-		'description'   => esc_html__( 'Found at the bottom of every page (except 404s) as the footer. Left Side.', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'First Footer Widget Area', 'tiny-framework' ),
+			'id'            => 'sidebar-4',
+			'description'   => esc_html__( 'Found at the bottom of every page (except 404s) as the footer. Left Side.', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Second Footer Widget Area', 'tiny-framework' ),
-		'id'            => 'sidebar-5',
-		'description'   => esc_html__( 'Found at the bottom of every page (except 404s) as the footer. Center.', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Second Footer Widget Area', 'tiny-framework' ),
+			'id'            => 'sidebar-5',
+			'description'   => esc_html__( 'Found at the bottom of every page (except 404s) as the footer. Center.', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Third Footer Widget Area', 'tiny-framework' ),
-		'id'            => 'sidebar-6',
-		'description'   => esc_html__( 'Found at the bottom of every page (except 404s) as the footer. Right Side.', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Third Footer Widget Area', 'tiny-framework' ),
+			'id'            => 'sidebar-6',
+			'description'   => esc_html__( 'Found at the bottom of every page (except 404s) as the footer. Right Side.', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 
-	register_sidebar( array(
-		'name'          => esc_html__( 'Footer Copyright Widget Area', 'tiny-framework' ),
-		'id'            => 'sidebar-7',
-		'description'   => esc_html__( 'Found at the bottom of every page as the footer. Left Side. Use Text widget with no Title.', 'tiny-framework' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Footer Copyright Widget Area', 'tiny-framework' ),
+			'id'            => 'sidebar-7',
+			'description'   => esc_html__( 'Found at the bottom of every page as the footer. Left Side. Use Text widget with no Title.', 'tiny-framework' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+		)
+	);
 }
 add_action( 'widgets_init', 'tinyframework_widgets_init' );
 
@@ -520,10 +553,14 @@ function tinyframework_fonts_url() {
 	}
 
 	if ( $fonts ) {
-		$fonts_url = esc_url( add_query_arg( array(
-			'family' => urlencode( implode( '|', $fonts ) ),
-			'subset' => urlencode( $subsets ),
-		), 'https://fonts.googleapis.com/css' ) );
+		$fonts_url = esc_url( add_query_arg(
+			array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			),
+			'https://fonts.googleapis.com/css'
+			)
+		);
 	}
 
 	return $fonts_url;

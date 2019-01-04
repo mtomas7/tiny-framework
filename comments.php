@@ -51,10 +51,12 @@ if ( post_password_required() ) {
 		</h2><!-- .comments-title -->
 
 		<ol class="comment-list">
-			<?php wp_list_comments( array(
+			<?php wp_list_comments(
+				array(
 				'callback' => 'tinyframework_comment', // Function located in: inc/template-tags.php
 				'style'    => 'ol',
-				) );
+				)
+			);
 			?>
 		</ol><!-- .comment-list -->
 
@@ -66,9 +68,14 @@ if ( post_password_required() ) {
 
 			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'tiny-framework' ); ?></p>
 
-		<?php endif; ?>
+		<?php
+		endif;
+		?>
 
-	<?php endif; // have_comments() ?>
+	<?php
+	endif;
+		// have_comments()
+	?>
 
 	<?php comment_form(); ?>
 

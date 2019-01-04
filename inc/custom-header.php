@@ -46,23 +46,25 @@ function tinyframework_custom_header_setup() {
 	 * I'm using %2$s to make it easy for the user to replace default header images in a child theme.
 	 * @link https://developer.wordpress.org/reference/functions/register_default_headers/
 	 */
-	register_default_headers( array(
-		'First'  => array(
-			'url'           => '%2$s/images/headers/Tiny-Framework-header-01.jpg',
-			'thumbnail_url' => '%2$s/images/headers/Tiny-Framework-header-01-thumbnail.jpg',
-			'description'   => esc_html_x( 'First', 'header image description', 'tiny-framework' )
-		),
-		'Second' => array(
-			'url'           => '%2$s/images/headers/Tiny-Framework-header-02.jpg',
-			'thumbnail_url' => '%2$s/images/headers/Tiny-Framework-header-02-thumbnail.jpg',
-			'description'   => esc_html_x( 'Second', 'header image description', 'tiny-framework' )
-		),
-		'Third'  => array(
-			'url'           => '%2$s/images/headers/Tiny-Framework-header-03.jpg',
-			'thumbnail_url' => '%2$s/images/headers/Tiny-Framework-header-03-thumbnail.jpg',
-			'description'   => esc_html_x( 'Third', 'header image description', 'tiny-framework' )
-		),
-	) );
+	register_default_headers(
+		array(
+			'First'  => array(
+				'url'           => '%2$s/images/headers/Tiny-Framework-header-01.jpg',
+				'thumbnail_url' => '%2$s/images/headers/Tiny-Framework-header-01-thumbnail.jpg',
+				'description'   => esc_html_x( 'First', 'header image description', 'tiny-framework' )
+			),
+			'Second' => array(
+				'url'           => '%2$s/images/headers/Tiny-Framework-header-02.jpg',
+				'thumbnail_url' => '%2$s/images/headers/Tiny-Framework-header-02-thumbnail.jpg',
+				'description'   => esc_html_x( 'Second', 'header image description', 'tiny-framework' )
+			),
+			'Third'  => array(
+				'url'           => '%2$s/images/headers/Tiny-Framework-header-03.jpg',
+				'thumbnail_url' => '%2$s/images/headers/Tiny-Framework-header-03-thumbnail.jpg',
+				'description'   => esc_html_x( 'Third', 'header image description', 'tiny-framework' )
+			),
+		)
+	);
 }
 add_action( 'after_setup_theme', 'tinyframework_custom_header_setup' );
 
@@ -86,8 +88,8 @@ function tinyframework_header_style() {
 	?>
 	<style type="text/css" id="tinyframework-header-css">
 	<?php
-		// Has the text been hidden?
-		if ( ! display_header_text() ) :
+	// Has the text been hidden?
+	if ( ! display_header_text() ) :
 	?>
 		.site-title,
 		.site-description {
@@ -95,15 +97,17 @@ function tinyframework_header_style() {
 			position: absolute;
 		}
 	<?php
-		// If the user has set a custom color for the text, use that.
-		else :
+	// If the user has set a custom color for the text, use that.
+	else :
 	?>
 		.site-header .site-title,
 		.site-header .site-title a,
 		.site-header .site-description {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
-	<?php endif; ?>
+	<?php
+	endif;
+	?>
 	</style>
 	<?php
 }

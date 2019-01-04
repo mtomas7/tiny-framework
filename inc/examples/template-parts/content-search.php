@@ -23,7 +23,8 @@
 
 		<?php tinyframework_excerpt(); // Function located in: inc/template-tags.php ?>
 
-		<?php if ( 'post' === get_post_type() ) : ?>
+		<?php
+		if ( 'post' === get_post_type() ) : ?>
 
 			<footer class="entry-meta">
 
@@ -35,7 +36,9 @@
 
 			</footer><!-- .entry-meta -->
 
-		<?php else : ?>
+		<?php
+		else :
+		?>
 
 			<footer class="entry-meta">
 
@@ -43,7 +46,9 @@
 
 			</footer><!-- .entry-meta -->
 
-		<?php endif; ?>
+		<?php
+		endif;
+		?>
 
 		<?php tha_entry_bottom(); // custom action hook ?>
 

@@ -23,17 +23,22 @@ get_header(); ?>
 
 			<?php tha_content_top(); // custom action hook ?>
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		if ( have_posts() ) : ?>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
+			<?php
+			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
 					<h1 class="page-title screen-reader-text" itemprop="headline"><?php single_post_title(); ?></h1>
 				</header>
-			<?php endif; ?>
+			<?php
+			endif;
+			?>
 
 			<?php
 			// Start the Loop
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) :
+				the_post();
 
 				/* Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
@@ -47,11 +52,17 @@ get_header(); ?>
 
 			<?php tinyframework_archive_page_nav(); // Function located in: inc/template-tags.php ?>
 
-		<?php else : // If no content, include the "No posts found" template. ?>
+		<?php
+		else :
+			// If no content, include the "No posts found" template.
+		?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		<?php endif; // end have_posts() check ?>
+		<?php
+		endif;
+			// end have_posts() check
+		?>
 
 			<?php tha_content_bottom(); // custom action hook ?>
 

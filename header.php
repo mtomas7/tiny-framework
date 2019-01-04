@@ -72,11 +72,14 @@
 
 						<h1 id="site-title"<?php tinyframework_semantics( 'site-title' ); // Function located in: inc/semantics.php ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"<?php tinyframework_semantics( 'site-url' ); // Function located in: inc/semantics.php ?>><?php bloginfo( 'name' ); ?></a></h1>
 
-					<?php else : ?>
+					<?php
+					else :
+					?>
 
 						<p id="site-title"<?php tinyframework_semantics( 'site-title' ); // Function located in: inc/semantics.php ?>><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"<?php tinyframework_semantics( 'site-url' ); // Function located in: inc/semantics.php ?>><?php bloginfo( 'name' ); ?></a></p>
 
-					<?php endif;
+					<?php
+					endif;
 
 						$description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) :
@@ -84,7 +87,8 @@
 
 						<p id="site-description"<?php tinyframework_semantics( 'site-description' ); // Function located in: inc/semantics.php ?>><?php echo $description; ?></p>
 
-					<?php endif;
+					<?php
+					endif;
 				?>
 
 			</div><!-- #site-title-wrapper -->
@@ -112,12 +116,15 @@
 
 			<!--<button class="go-to-top"><a href="#page"><span class="icon-webfont fa-chevron-circle-up" aria-hidden="true"></span></a></button>-->
 
-			<?php wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'menu_id'        => 'primary-menu',
-				'menu_class'     => 'nav-menu',
-				'depth'          => 4,
-				) );
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'primary',
+					'menu_id'        => 'primary-menu',
+					'menu_class'     => 'nav-menu',
+					'depth'          => 4,
+				)
+			);
 			?>
 
 		</nav><!-- #site-navigation -->
@@ -144,11 +151,13 @@
 				( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( $header_image_width, $header_image_width ) ) ) &&
 				$image[1] >= $header_image_width ) :
 			// Houston, we have a new header image!
-			echo get_the_post_thumbnail( $post->ID, 'custom-header-image', array(
-				'class'    => 'photo u-featured', // At this point using a work-around: https://core.trac.wordpress.org/ticket/36996#comment:3 that is added as 12.5 in functions.php
-				'id'       => 'featured-image', // Experimental! This ID (should it be #post-thumbnail ?) could be used for the itemref in the article element (in inc/semantics.php) for the Google AMP Articles Rich Snippets "Article image" validation.
-				'itemprop' => 'image',
-				) );
+			echo get_the_post_thumbnail( $post->ID, 'custom-header-image',
+				array(
+					'class'    => 'photo u-featured', // At this point using a work-around: https://core.trac.wordpress.org/ticket/36996#comment:3 that is added as 12.5 in functions.php
+					'id'       => 'featured-image', // Experimental! This ID (should it be #post-thumbnail ?) could be used for the itemref in the article element (in inc/semantics.php) for the Google AMP Articles Rich Snippets "Article image" validation.
+					'itemprop' => 'image',
+				)
+			);
 		else :
 			if ( function_exists( 'get_custom_header' ) ) {
 				$header_image_width  = get_custom_header()->width;
@@ -162,9 +171,15 @@
 
 				<img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" />
 
-			<?php endif; // end check for removed header image ?>
+			<?php
+			endif;
+				// end check for removed header image
+			?>
 
-		<?php endif; // end check for featured image or standard header ?>
+		<?php
+		endif;
+			// end check for featured image or standard header
+		?>
 
 		<!-- Custom Header - End -->
 

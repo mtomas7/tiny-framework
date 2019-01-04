@@ -428,12 +428,15 @@ function tinyframework_get_semantics( $id = null ) {
 					$classes['itemtype']  = array( 'https://schema.org/AboutPage' );
 
 				// Contacts page.
-				} elseif ( is_page( array(
-								'contact-page',
-								'contact-us',
-								'contacts',
-								'contact',
-							) ) ) {
+				} elseif ( is_page(
+								array(
+									'contact-page',
+									'contact-us',
+									'contacts',
+									'contact',
+								)
+							)
+						) {
 					$classes['itemtype']  = array( 'https://schema.org/ContactPage' );
 				}
 
