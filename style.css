@@ -2609,10 +2609,15 @@ body {
 .content-area article:last-child,
 .content-area section, /* section is for 404.php and content-none.php */
 .page .content-area article {
-	background-image: none!important;
 	border-bottom: 0;
 	margin-bottom: 24px;
 	margin-bottom: 1.5rem;
+}
+/* Remove the background on articles in the main content area. */
+.attachment .content-area article,
+.content-area article:last-child,
+.page .content-area article {
+	background-image: none!important;
 }
 .archive .content-area article,
 .blog .content-area article,
