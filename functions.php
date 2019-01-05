@@ -806,13 +806,19 @@ add_filter( 'wp_page_menu_args', 'tinyframework_page_menu_args' );
 
 // 9.0 - Footer credits - Tip87 - Action Hook implementation example.
 function tinyframework_display_credits() {
+
+	if ( function_exists( 'the_privacy_policy_link' ) ) {
+		// If a privacy policy page has been set (Admin Panel Menu > Settings > Privacy), then a link to it will automatically be shown in the footer.
+		the_privacy_policy_link( '', ' <span class="meta-separator" aria-hidden="true">&bull;</span> ' );
+		}
+
 	/* translators: %s: Theme name. */
 	$text = sprintf( esc_html__( 'Using %s', 'tiny-framework' ), '<a href="http://mtomas.com/1/tiny-forge-free-mobile-first-wordpress-theme" rel="nofollow">Tiny Framework</a> ' );
 
 	// If you would like to use long version of credits, use these two lines below (and delete the line above):
 
 	/*
-	$text = sprintf( esc_html__( 'Powered by %s', 'tiny-framework' ), '<a href="https://wordpress.org/" class="icon-webfont fa-wordpress" rel="generator"><span class="screen-reader-text">WordPress</span></a>' );
+	$text = sprintf( esc_html__( 'Powered by %s', 'tiny-framework' ), '<a href="https://wordpress.org/" class="icon-webfont fa-wordpress imprint" rel="generator"><span class="screen-reader-text">WordPress</span></a>' );
 	$text .= sprintf( esc_html__( ' and %s', 'tiny-framework' ), '<a href="http://mtomas.com/1/tiny-forge-free-mobile-first-wordpress-theme" rel="nofollow">Tiny Framework</a> ' );
 	*/
 
