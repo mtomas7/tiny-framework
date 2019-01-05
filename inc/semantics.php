@@ -67,14 +67,6 @@
  *
  * h-feed (in inc/semantics.php only) @link http://microformats.org/wiki/h-feed
  * - h-entry (in inc/semantics.php only) @link http://microformats.org/wiki/h-entry
- * -- Activity streams @link http://microformats.org/wiki/activity-streams
- * --- h-as-page (in inc/semantics.php only)
- * --- h-as-article (in inc/semantics.php only)
- * --- h-as-note (in inc/semantics.php only)
- * --- h-as-audio (in inc/semantics.php only)
- * --- h-as-video (in inc/semantics.php only)
- * --- h-as-image (in inc/semantics.php only)
- * --- h-as-bookmark (in inc/semantics.php only)
  *
  * -- h-card (not used directly) @link http://microformats.org/wiki/h-card
  * --- u-url (in inc/semantics.php only)
@@ -83,7 +75,6 @@
  *    Overall comments in the theme should be updated, perhaps removing custom code, so default WP comment code would be used.
  * -- Comment Draft (Currently disabled) @link http://microformats.org/wiki/comment-brainstorming#microformats2_h-feed_p-comments
  * --- h-feed p-comments (in comments.php only)
- * ---- h-as-comment (in inc/semantics.php only)
  * ---- h-entry (in inc/semantics.php only)
  * ---- h-cite (in inc/semantics.php only)
  * ---- p-comment (in inc/semantics.php only)
@@ -271,6 +262,11 @@ function tinyframework_post_class( $classes ) {
 
 	$classes = array_diff( $classes, array( 'hentry' ) );
 
+	if ( ! get_the_title() ) {
+		// Support for titleless posts
+		$classes[] = 'no-title';
+	}
+
 	if ( ! is_singular() ) {
 		return tinyframework_get_post_class( $classes );
 	} else {
@@ -309,40 +305,6 @@ function tinyframework_get_post_class( $classes = array() ) {
 
 	// Add hentry to the same tag as h-entry.
 	$classes[] = 'hentry';
-
-	// Adds microformats 2 activity-stream support for pages and articles.
-	if ( get_post_type() === 'page' ) {
-		$classes[] = 'h-as-page';
-	}
-
-	if ( ! get_post_format() && get_post_type() === 'post' ) {
-		$classes[] = 'h-as-article';
-	}
-
-  // Adds some more microformats 2 classes based on the posts "format".
-	switch ( get_post_format() ) {
-		case 'aside':
-		case 'status':
-			$classes[] = 'h-as-note';
-			break;
-
-		case 'audio':
-			$classes[] = 'h-as-audio';
-			break;
-
-		case 'video':
-			$classes[] = 'h-as-video';
-			break;
-
-		case 'gallery':
-		case 'image':
-			$classes[] = 'h-as-image';
-			break;
-
-		case 'link':
-			$classes[] = 'h-as-bookmark';
-			break;
-	}
 
 	return array_unique( $classes );
 }
@@ -637,7 +599,6 @@ add_filter( 'get_search_form', 'tinyframework_get_search_form' );
  */
 
 function tinyframework_comment_class( $classes ) {
-	$classes[] = 'h-as-comment';
 	$classes[] = 'h-entry';
 	$classes[] = 'h-cite';
 	$classes[] = 'p-comment';
