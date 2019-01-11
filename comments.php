@@ -7,7 +7,7 @@
  * handled by a callback to tinyframework_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Tiny_Framework
  * @since Tiny Framework 1.0

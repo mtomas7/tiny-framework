@@ -634,6 +634,8 @@ This changelog will include only important changes. To see all changes please vi
 	https://core.trac.wordpress.org/changeset/43051#file17
 - Added function that modifies Tag Cloud widget arguments to display all tags in the same font size and use list format for better accessibility, you can override arguments of this function from a child theme (via Twenty Twelve)
 	https://core.trac.wordpress.org/changeset/41756/trunk/src/wp-content/themes/twentytwelve/functions.php
+- Added styles and support for the new block-based editor (Gutenberg) (via Twenty Twelve)
+	https://core.trac.wordpress.org/changeset/44140/trunk/src/wp-content/themes/twentytwelve/functions.php
 
 ### Fixed
 - Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
@@ -649,6 +651,7 @@ This changelog will include only important changes. To see all changes please vi
 - Moved Jetpack support funcions to new file. Only include the Jetpack file if Jetpack is available on a site (via Underscores)
 	https://github.com/Automattic/_s/commit/4a2e99e6915ae93c380317f9149a74c767ea85c2
 - Improved code according to new WP Coding Standards.
+- Updated Codex link (via Twenty Twelve)
 
 
 = 2.3.1 =

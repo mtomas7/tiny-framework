@@ -10,7 +10,7 @@
  * already has tag.php for Tag archives, category.php for Category archives,
  * and author.php for Author archives. You can find these examples in inc/examples.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Tiny_Framework
  * @since Tiny Framework 1.0

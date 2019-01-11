@@ -2,7 +2,7 @@
 /**
  * Template part used for displaying page content in page.php.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Tiny_Framework
  * @since Tiny Framework 1.0

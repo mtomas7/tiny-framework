@@ -2,7 +2,7 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * Learn more: @link https://codex.wordpress.org/Template_Hierarchy
+ * Learn more: @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package Tiny_Framework
  * @since Tiny Framework 1.0
