@@ -34,6 +34,7 @@
  *    1.2 - Tip13 - Remove Open Sans (and other Google Fonts) as default font - disabled by default.
  *    1.3 - Allow HTML in post title. Original parent theme's function changes title for protected and private posts - disabled by default.
  *    1.4 - Change/Remove Footer credits - Tip87 - Action Hook implementation example.
+ *    1.5 - Modifies Tag Cloud widget arguments to display all tags in the same font size and use list format for better accessibility.
  *  2.0 - Custom Child Theme functions.
  *    2.1 - Tip01 - Properly include (enqueue and/or register) CSS and JavaScript files via functions.php - http://mtomas.com/27/
  *    2.2 - Add optional meta tags, scripts to head - disabled by default.
@@ -150,6 +151,28 @@ function tinyframeworkchild_display_credits() {
 	echo apply_filters( 'tinyframework_credits_text', $text );
 }
 add_action( 'tinyframework_credits', 'tinyframeworkchild_display_credits' );
+*/
+
+/**
+ * 1.5 - Modifies Tag Cloud widget arguments to display all tags in the same font size
+ * and use list format for better accessibility.
+ *
+ * @since Tiny Framework 3.2
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array The filtered arguments for tag cloud widget.
+ */
+
+/*
+function tinyframework_widget_tag_cloud_args( $args ) {
+	$args['largest']  = 22;
+	$args['smallest'] = 8;
+	$args['unit']     = 'pt';
+	$args['format']   = 'list';
+
+	return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'tinyframework_widget_tag_cloud_args' );
 */
 
 

@@ -72,6 +72,7 @@
  *    5.7 - Add additional scripts for accessibility, etc.
  *    5.8 - Make "skip to content" link work correctly in IE9, Chrome, and Opera for better accessibility.
  *    5.9 - Add preconnect for Google Fonts.
+ *    5.10 - Modifies Tag Cloud widget arguments to display all tags in the same font size and use list format for better accessibility.
  *  6.0 - Add optional meta tags, scripts to head - disabled by default.
  *  7.0 - Enhancements for posts.
  *    7.1 - Change title for protected and private posts - words "protected" and "private" are replaced by lock/lock and user symbols.
@@ -709,6 +710,29 @@ function tinyframework_resource_hints( $urls, $relation_type ) {
 	return $urls;
 }
 add_filter( 'wp_resource_hints', 'tinyframework_resource_hints', 10, 2 );
+
+if ( ! function_exists( 'tinyframework_widget_tag_cloud_args' ) ) :
+/**
+ * 5.10 - Modifies Tag Cloud widget arguments to display all tags in the same font size
+ * and use list format for better accessibility.
+ * 
+ * This is "plugable function" - use function with the same name located in the child theme's functions.php file, to change argument values.
+ *
+ * @since Tiny Framework 3.2
+ *
+ * @param array $args Arguments for tag cloud widget.
+ * @return array The filtered arguments for tag cloud widget.
+ */
+function tinyframework_widget_tag_cloud_args( $args ) {
+	$args['largest']  = 22;
+	$args['smallest'] = 8;
+	$args['unit']     = 'pt';
+	$args['format']   = 'list';
+
+	return $args;
+}
+endif;
+add_filter( 'widget_tag_cloud_args', 'tinyframework_widget_tag_cloud_args' );
 
 
 

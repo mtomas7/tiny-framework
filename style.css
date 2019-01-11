@@ -2408,6 +2408,12 @@ figure.alignright img[class*="wp-image-"] {
 .widget_tag_cloud {
 	line-height: 1.2;
 }
+.widget_tag_cloud ul {
+	margin: 0;
+}
+.widget_tag_cloud ul li {
+	display: inline;
+}
 
 /* 9.3 Footer widget styles */
 

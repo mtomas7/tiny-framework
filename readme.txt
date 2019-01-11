@@ -590,9 +590,9 @@ Other components:
 
 normalize.css                   - 7.0.0     - 2017-07-01 - Initial CSS rules       - https://github.com/necolas/normalize.css
 Font Awesome                    - 4.7.0     - 2017-07-01 - Webicon font            - http://fontawesome.io
-Theme Hook Alliance hooks       - 1.0-draft - 2017-07-01 - Custom hooks            - https://github.com/zamoose/themehookalliance
-html5shiv                       - 3.7.3-pre - 2017-07-01 - HTML5 compatibility     - https://github.com/aFarkas/html5shiv
-SemPress                        - 1.5.6     - 2017-07-01 - Microformats v2 support - https://github.com/pfefferle/SemPress/
+Theme Hook Alliance hooks       - 1.0-draft - 2019-01-04 - Custom hooks            - https://github.com/zamoose/themehookalliance
+html5shiv                       - 3.7.3-pre - 2019-01-04 - HTML5 compatibility     - https://github.com/aFarkas/html5shiv
+SemPress                        - 1.5.11    - 2019-01-04 - Microformats v2 support - https://github.com/pfefferle/SemPress/
 Persist Admin notice Dismissals - 1.3       - 2017-07-01 - Dismiss admin notices   - https://github.com/collizo4sky/persist-admin-notices-dismissal
 Bootstrap                       - 3.3.7     - 2017-07-01 - Alert and Button CSS    - http://getbootstrap.com
 
@@ -623,13 +623,17 @@ This changelog will include only important changes. To see all changes please vi
 ----------------------
 
 ### Release info
-- Release time investment (Development & QA): ~0 h and stopped counting somewhere down the road...
+- Release time investment (Development & QA): ~3 h and stopped counting somewhere down the road...
 - Free theme support time investment: ~0 h and stopped counting somewhere down the road...
 - Theme documentation time investment: ~0 h and stopped counting somewhere down the road...
 
 ### Added
 - Added security option to functions.php of the child theme: Disable XML-RPC service.
 - Added SASS support. I decided not to replicate whole CSS styles in SASS, but use SASS as a staging step to make easier the customization of a child theme, especially font sizes, colors, etc. - things that are also marked in style.css with Tip88.
+- Added support for a Privacy Page link (via Twenty Twelve)
+	https://core.trac.wordpress.org/changeset/43051#file17
+- Added function that modifies Tag Cloud widget arguments to display all tags in the same font size and use list format for better accessibility, you can override arguments of this function from a child theme (via Twenty Twelve)
+	https://core.trac.wordpress.org/changeset/41756/trunk/src/wp-content/themes/twentytwelve/functions.php
 
 ### Fixed
 - Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
@@ -637,8 +641,12 @@ This changelog will include only important changes. To see all changes please vi
 	https://github.com/Automattic/_s/commit/d1f1f3098352713c80b3c2e5ef5fc9d86ad71d52
 
 ### Changed
-- Moved Jetpack support funcions to new file. Only include the Jetpack file if Jetpack is available on a site  (via Underscores)
+- Dependency update: SemPress Microformats support 1.5.6 --> 1.5.11
+	https://github.com/pfefferle/SemPress/commit/8d0f5ac9c62dbea5afa512cef41b737a78af01a8#diff-10cdaff5478267fef5bdc5dfde16b261
+	https://github.com/pfefferle/SemPress/commit/c618a67ca7adf06cedd44501321462060ef636ea
+- Moved Jetpack support funcions to new file. Only include the Jetpack file if Jetpack is available on a site (via Underscores)
 	https://github.com/Automattic/_s/commit/4a2e99e6915ae93c380317f9149a74c767ea85c2
+- Improved code according to new WP Coding Standards.
 
 
 = 2.3.1 =
