@@ -639,6 +639,8 @@ This changelog will include only important changes. To see all changes please vi
 - Added CSS style for Copyright text widget to keep Log In button in-line - apparently, sometimes WP wraps text inside of the text widget in an additional paragraph, sometimes leaves the text as it is.
 - Replace underscore with hyphen in script handle (via Underscores)
 	https://github.com/Automattic/_s/commit/d1f1f3098352713c80b3c2e5ef5fc9d86ad71d52
+- Removed "if ! function_exists" from the Child Theme Example, as it was a mistake to include these statements in the child theme. Read more at:
+	https://code.tutsplus.com/tutorials/a-guide-to-overriding-parent-theme-functions-in-your-child-theme--cms-22623
 
 ### Changed
 - Dependency update: SemPress Microformats support 1.5.6 --> 1.5.11

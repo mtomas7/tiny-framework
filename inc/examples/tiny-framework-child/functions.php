@@ -67,8 +67,6 @@
  */
 
 /*
-if ( ! function_exists( 'tinyframework_archive_page_nav' ) ) :
-
 function tinyframework_archive_page_nav() {
 	the_posts_pagination(
 		array(
@@ -78,7 +76,6 @@ function tinyframework_archive_page_nav() {
 		)
 	);
 }
-endif;
 */
 
 // 1.2 - Tip13 - Remove Open Sans (and other Google Fonts) as default font.
@@ -104,8 +101,6 @@ add_action( 'wp_print_styles','tinyframeworkchild_remove_google_fonts' );
  */
 
 /*
-if ( ! function_exists( 'tinyframework_the_title_trim' ) ) :
-
 function tinyframework_the_title_trim($title) {
 	// $title = esc_attr($title); // Sanitize HTML characters in the title. Comment out this line if you want to use HTML in post titles.
 	$findthese = array(
@@ -121,7 +116,6 @@ function tinyframework_the_title_trim($title) {
 	$title = preg_replace($findthese, $replacewith, $title);
 	return $title;
 }
-endif;
 add_filter( 'the_title', 'tinyframework_the_title_trim' );
 */
 
